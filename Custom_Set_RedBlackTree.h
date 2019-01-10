@@ -3,27 +3,27 @@
 /*
 	Custom_Set_RedBlackTree		
 
-		ÇÏ³ªÀÇ Å¬·¡½º¸¦ ³ëµå·Î ÇÏ´Â ·¹µåºí·¢Æ®¸® ( ÀûÈæ³ª¹« ? ) ÄÚµåÀÔ´Ï´Ù.
-		°øºÎ¸¦ À§ÇØ Âü°íÇÒ¸¸ÇÑ ·¹µå ºí·¢ Æ®¸® ÄÚµå¸¦ Ã£´ø Áß¿¡, ¸¸¸¸ÇÑ ÄÚµå°¡ ¾ø¾î¼­.... xtree...ÀÌ°Ô Á¤¸» C++·Î ÀÛ¼ºµÈ°Ô ¸Â´ÂÁö...
+		í•˜ë‚˜ì˜ í´ëž˜ìŠ¤ë¥¼ ë…¸ë“œë¡œ í•˜ëŠ” ë ˆë“œë¸”ëž™íŠ¸ë¦¬ ( ì í‘ë‚˜ë¬´ ? ) ì½”ë“œìž…ë‹ˆë‹¤.
+		ê³µë¶€ë¥¼ ìœ„í•´ ì°¸ê³ í• ë§Œí•œ ë ˆë“œ ë¸”ëž™ íŠ¸ë¦¬ ì½”ë“œë¥¼ ì°¾ë˜ ì¤‘ì—, ë§Œë§Œí•œ ì½”ë“œê°€ ì—†ì–´ì„œ.... xtree...ì´ê²Œ ì •ë§ C++ë¡œ ìž‘ì„±ëœê²Œ ë§žëŠ”ì§€...
 		
-		´ëÇÐ»ý 3ÇÐ³â Æò±Õ ¼öÁØ¿¡¼­ ÀÌÇØÇÒ ¼ö ÀÖµµ·Ï ¹®¹ýÀûÀ¸·Î °£´ÜÇÑ, 
-		¶Ç ÇÑ±¹¾î·Î ÁÖ¼®À» ÀÛ¼ºÇÏ¿© Á¶±Ý´õ Ä£ÀýÇÑ, 
-		·¹µåºí·¢Æ®¸® ÄÚµå ÀÛ¼ºÀ» ¸ñÇ¥·Î Çß½À´Ï´Ù. 
+		ëŒ€í•™ìƒ 3í•™ë…„ í‰ê·  ìˆ˜ì¤€ì—ì„œ ì´í•´í•  ìˆ˜ ìžˆë„ë¡ ë¬¸ë²•ì ìœ¼ë¡œ ê°„ë‹¨í•œ, 
+		ë˜ í•œêµ­ì–´ë¡œ ì£¼ì„ì„ ìž‘ì„±í•˜ì—¬ ì¡°ê¸ˆë” ì¹œì ˆí•œ, 
+		ë ˆë“œë¸”ëž™íŠ¸ë¦¬ ì½”ë“œ ìž‘ì„±ì„ ëª©í‘œë¡œ í–ˆìŠµë‹ˆë‹¤. 
 			
-		»ç½Ç Á¦°¡ ´ëÇÐ»ýÀÌ¶ó¼­...¤¾ ´É·ÂºÎÁ·À¸·Î ÀÎÇØ.. ºÐ¸íÈ÷ ¹®Á¦°¡ µÉ ¼ö ÀÖ´Â ºÎºÐÀÌ ¸¹¾Æ¿ä.. °³¼±»çÇ×ÀÌ ÀÖÀ¸½Ç °æ¿ì, PRºÎÅ¹µå·Á¿ä!
+		ì‚¬ì‹¤ ì œê°€ ëŒ€í•™ìƒì´ë¼ì„œ...ã…Ž ëŠ¥ë ¥ë¶€ì¡±ìœ¼ë¡œ ì¸í•´.. ë¶„ëª…ížˆ ë¬¸ì œê°€ ë  ìˆ˜ ìžˆëŠ” ë¶€ë¶„ì´ ë§Žì•„ìš”.. ê°œì„ ì‚¬í•­ì´ ìžˆìœ¼ì‹¤ ê²½ìš°, PRë¶€íƒë“œë ¤ìš”!
 	
-	#0. ¿¹Á¦ ÇÔ¼ö¸¦ Á¦°øÇÕ´Ï´Ù. CUSTOM_SET::TestFunc()¸¦ main¿¡ ³Ö¾îÁÖ¼Å¿ä!
-	#1. Àç±ÍÇÔ¼ö¸¦ »ç¿ëÇÏÁö ¾Ê´Â Æ®¸® ¼øÈ¸ ÇÔ¼ö¸¦ ¾ðÁ¨°¡´Â Ãß°¡....¤¾	
-	#2. ·¹µåºí·¢Æ®¸®¿¡ ´ëÇÑ ÀÌ·ÐÀûÀÎ ¼³¸íÀº À§Å°¹é°ú (https://ko.wikipedia.org/wiki/%EB%A0%88%EB%93%9C-%EB%B8%94%EB%9E%99_%ED%8A%B8%EB%A6%AC)¸¦ È®ÀÎÇÏ¼¼¿ä!
+	#0. ì˜ˆì œ í•¨ìˆ˜ë¥¼ ì œê³µí•©ë‹ˆë‹¤. CUSTOM_SET::TestFunc()ë¥¼ mainì— ë„£ì–´ì£¼ì…”ìš”!
+	#1. ìž¬ê·€í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ì§€ ì•ŠëŠ” íŠ¸ë¦¬ ìˆœíšŒ í•¨ìˆ˜ë¥¼ ì–¸ì  ê°€ëŠ” ì¶”ê°€....ã…Ž	
+	#2. ë ˆë“œë¸”ëž™íŠ¸ë¦¬ì— ëŒ€í•œ ì´ë¡ ì ì¸ ì„¤ëª…ì€ ìœ„í‚¤ë°±ê³¼ (https://ko.wikipedia.org/wiki/%EB%A0%88%EB%93%9C-%EB%B8%94%EB%9E%99_%ED%8A%B8%EB%A6%AC)ë¥¼ í™•ì¸í•˜ì„¸ìš”!
 
-	!0. ºôµå ½ÇÆÐ ½Ã, ¸ÖÆ¼ ¹ÙÀÌÆ®¿Í SDL °Ë»çÀÇ Off, C++17 ¹öÀü »ç¿ë µîÀ» È®ÀÎÇØÁÖ¼¼¿ä!
-	!1. ´ç¿¬È÷ º´·Ä Á¦¾î°¡ µÇÁö ¾Ê½À´Ï´Ù... c++17¿¡ Ãß°¡µÈ parallel stl ¾²¼¼¿ä..! ¹°·Ð º´Çà¼º ÇÊ¿ä ¾ø¾îµµ... Set, Map ¾²¼¼¿ä!! STL Â¯Â¯!
-	!2. ÅÛÇÃ¸´ DATA, KEY_TYPE¿¡ ´ëÇÏ¿©.. ´É·ÂºÎÁ·À¸·Î ÀÎÇØ ÀÏºÎ ¿ä±¸»çÇ×ÀÌ Á¸ÀçÇÕ´Ï´Ù! rbTreeNodeÀÇ ÁÖ¼®À» È®ÀÎÇØÁÖ¼¼¿ä :)
+	!0. ë¹Œë“œ ì‹¤íŒ¨ ì‹œ, ë©€í‹° ë°”ì´íŠ¸ì™€ SDL ê²€ì‚¬ì˜ Off, C++17 ë²„ì „ ì‚¬ìš© ë“±ì„ í™•ì¸í•´ì£¼ì„¸ìš”!
+	!1. ë‹¹ì—°ížˆ ë³‘ë ¬ ì œì–´ê°€ ë˜ì§€ ì•ŠìŠµë‹ˆë‹¤... c++17ì— ì¶”ê°€ëœ parallel stl ì“°ì„¸ìš”..! ë¬¼ë¡  ë³‘í–‰ì„± í•„ìš” ì—†ì–´ë„... Set, Map ì“°ì„¸ìš”!! STL ì§±ì§±!
+	!2. í…œí”Œë¦¿ DATA, KEY_TYPEì— ëŒ€í•˜ì—¬.. ëŠ¥ë ¥ë¶€ì¡±ìœ¼ë¡œ ì¸í•´ ì¼ë¶€ ìš”êµ¬ì‚¬í•­ì´ ì¡´ìž¬í•©ë‹ˆë‹¤! rbTreeNodeì˜ ì£¼ì„ì„ í™•ì¸í•´ì£¼ì„¸ìš” :)
 
-	ºÎÁ·ÇÑ ÄÚµå¸¦ È®ÀÎÇØÁÖ¼Å¼­ °¨»çÇÕ´Ï´Ù :)
+	ë¶€ì¡±í•œ ì½”ë“œë¥¼ í™•ì¸í•´ì£¼ì…”ì„œ ê°ì‚¬í•©ë‹ˆë‹¤ :)
 
-	2019³â 1¿ù 3ÀÏ 
-	¿ø¼º¿¬ ¿Ã¸².
+	2019ë…„ 1ì›” 3ì¼ 
+	ì›ì„±ì—° ì˜¬ë¦¼.
 	KoreaGameMaker@gmail.com
 	GameForPeople(github)
 */
@@ -47,18 +47,18 @@ namespace CUSTOM_SET_REDBLACKTREE
 
 	/*
 		rbTreeNode
-			- rbTree¸¦ ±¸¼ºÇÏ´Â ´ÜÀ§(Node)ÀÔ´Ï´Ù.
+			- rbTreeë¥¼ êµ¬ì„±í•˜ëŠ” ë‹¨ìœ„(Node)ìž…ë‹ˆë‹¤.
 
-		#0. DATA´Â º¸°üÇÒ µ¥ÀÌÅÍ, KEY_TYPEÀº GetKey()ÀÇ ¹ÝÈ¯µÇ´Â ÀÚ·áÇüÀÔ´Ï´Ù.
+		#0. DATAëŠ” ë³´ê´€í•  ë°ì´í„°, KEY_TYPEì€ GetKey()ì˜ ë°˜í™˜ë˜ëŠ” ìžë£Œí˜•ìž…ë‹ˆë‹¤.
 
-		!0. DATA´Â ÀÇ¹«ÀûÀ¸·Î GetKey() ÇÔ¼ö¸¦ Á¦°øÇØ¾ßÇÕ´Ï´Ù.
-		!1. KEY_TYPEÀÌ ±âÃÊ ÀÚ·áÇüÀÌ ¾Æ´Ò °æ¿ì ÀÏºÎ ¿¬»êÀÚ¸¦ ¿ä±¸ÇÕ´Ï´Ù. (TestKey Class¸¦ Âü°íÇØÁÖ¼¼¿ä!)
-			- Å° °ª Å©±â ºñ±³¿¡ »ç¿ëµÉ ¿¬»êÀÚ operator<()¸¦ Á¦°ø(¿À¹ö·Îµù)ÇØ¾ßÇÕ´Ï´Ù.
-			- Å° °ªÀÌ µ¿ÀÏÇÑÁö °Ë»çÇÒ¶§ »ç¿ëµÉ ¿¬»êÀÚ operator==()¸¦ Á¦°ø(¿À¹ö·Îµù)ÇØ¾ßÇÕ´Ï´Ù.
-			- Ãâ·Â¿¡ »ç¿ëµÉ ¿¬»êÀÚ operator<<()¸¦ Á¦°ø(¿À¹ö·Îµù)ÇØ¾ßÇÕ´Ï´Ù.
+		!0. DATAëŠ” ì˜ë¬´ì ìœ¼ë¡œ GetKey() í•¨ìˆ˜ë¥¼ ì œê³µí•´ì•¼í•©ë‹ˆë‹¤.
+		!1. KEY_TYPEì´ ê¸°ì´ˆ ìžë£Œí˜•ì´ ì•„ë‹ ê²½ìš° ì¼ë¶€ ì—°ì‚°ìžë¥¼ ìš”êµ¬í•©ë‹ˆë‹¤. (TestKey Classë¥¼ ì°¸ê³ í•´ì£¼ì„¸ìš”!)
+			- í‚¤ ê°’ í¬ê¸° ë¹„êµì— ì‚¬ìš©ë  ì—°ì‚°ìž operator<()ë¥¼ ì œê³µ(ì˜¤ë²„ë¡œë”©)í•´ì•¼í•©ë‹ˆë‹¤.
+			- í‚¤ ê°’ì´ ë™ì¼í•œì§€ ê²€ì‚¬í• ë•Œ ì‚¬ìš©ë  ì—°ì‚°ìž operator==()ë¥¼ ì œê³µ(ì˜¤ë²„ë¡œë”©)í•´ì•¼í•©ë‹ˆë‹¤.
+			- ì¶œë ¥ì— ì‚¬ìš©ë  ì—°ì‚°ìž operator<<()ë¥¼ ì œê³µ(ì˜¤ë²„ë¡œë”©)í•´ì•¼í•©ë‹ˆë‹¤.
 		
-		!2. DATA¿Í KEY_TYPEÀº ±âº» »ý¼ºÀÚ¸¦ ¿ä±¸ÇÕ´Ï´Ù.
-			- rbTree´Â pNullNode(NIL)¸¦ »ý¼ºÇÏ´Âµ¥, ÀÌ¶§ »ç¿ëµÉ ±âº»»ý¼ºÀÚ¸¦ ¿ä±¸ÇÕ´Ï´Ù.
+		!2. DATAì™€ KEY_TYPEì€ ê¸°ë³¸ ìƒì„±ìžë¥¼ ìš”êµ¬í•©ë‹ˆë‹¤.
+			- rbTreeëŠ” pNullNode(NIL)ë¥¼ ìƒì„±í•˜ëŠ”ë°, ì´ë•Œ ì‚¬ìš©ë  ê¸°ë³¸ìƒì„±ìžë¥¼ ìš”êµ¬í•©ë‹ˆë‹¤.
 	*/
 	template <typename DATA, typename KEY_TYPE>
 	class rbTreeNode {
@@ -84,7 +84,7 @@ namespace CUSTOM_SET_REDBLACKTREE
 	public:
 		/*
 			Define the constructor for pNullNode.
-				#0. rbTree¿¡¼­ nullNode¸¦ È°¿ëÇÏ±â¿¡ ÀÌ¸¦ »ý¼ºÇØÁÖ±â À§ÇÑ ±âº»»ý¼ºÀÚ°¡ ÇÊ¿äÇÕ´Ï´Ù.
+				#0. rbTreeì—ì„œ nullNodeë¥¼ í™œìš©í•˜ê¸°ì— ì´ë¥¼ ìƒì„±í•´ì£¼ê¸° ìœ„í•œ ê¸°ë³¸ìƒì„±ìžê°€ í•„ìš”í•©ë‹ˆë‹¤.
 		*/ 
 		rbTreeNode<DATA, KEY_TYPE>() noexcept
 			: data(), up(this), left(this), right(this), color(false)
@@ -110,26 +110,26 @@ namespace CUSTOM_SET_REDBLACKTREE
 	public:
 		/*
 			GetKey()
-				- data °´Ã¼¿¡¼­ Á¤ÀÇµÈ GetKey()¸¦ È£Ãâ, ¹ÝÈ¯ÇÕ´Ï´Ù.
+				- data ê°ì²´ì—ì„œ ì •ì˜ëœ GetKey()ë¥¼ í˜¸ì¶œ, ë°˜í™˜í•©ë‹ˆë‹¤.
 
-			!0. data¸¦ ¹ÝÈ¯ÇÕ´Ï´Ù.
+			!0. dataë¥¼ ë°˜í™˜í•©ë‹ˆë‹¤.
 		*/
 		_NODISCARD INLINE DATA	GetData() const noexcept { return data; };
 
 		/*
 			GetKey()
-				- data °´Ã¼¿¡¼­ Á¤ÀÇµÈ GetKey()¸¦ È£Ãâ, ¹ÝÈ¯ÇÕ´Ï´Ù.
+				- data ê°ì²´ì—ì„œ ì •ì˜ëœ GetKey()ë¥¼ í˜¸ì¶œ, ë°˜í™˜í•©ë‹ˆë‹¤.
 
-			!0. data·Î µé¾î°¡´Â °´Ã¼¿¡¼­ ÇØ´ç ÇÔ¼ö (GetKey)°¡ ÀÖ¾î¾ß ÇÕ´Ï´Ù.
+			!0. dataë¡œ ë“¤ì–´ê°€ëŠ” ê°ì²´ì—ì„œ í•´ë‹¹ í•¨ìˆ˜ (GetKey)ê°€ ìžˆì–´ì•¼ í•©ë‹ˆë‹¤.
 		*/
 		_NODISCARD INLINE KEY_TYPE	GetKey() const /*noexcept*/ { return data.GetKey(); };
 
 	public:
 		/*
 			PrintNodeInfo()
-				- ³ëµåÀÇ »óÅÂ, »ö, Á¤º¸, 
+				- ë…¸ë“œì˜ ìƒíƒœ, ìƒ‰, ì •ë³´, 
 
-			!0. ¸¹Àº ¼öÀÇ Ãâ·Â¹®ÀÌ Æ÷ÇÔµÈ ¼º´ÉÀ» °í·ÁÇÏÁö ¾ÊÀº ´À¸° ÇÔ¼ö ÀÔ´Ï´Ù.
+			!0. ë§Žì€ ìˆ˜ì˜ ì¶œë ¥ë¬¸ì´ í¬í•¨ëœ ì„±ëŠ¥ì„ ê³ ë ¤í•˜ì§€ ì•Šì€ ëŠë¦° í•¨ìˆ˜ ìž…ë‹ˆë‹¤.
 		*/
 		_DEPRECATED void PrintNodeInfo(rbTreeNode<DATA, KEY_TYPE>* pNullNode) noexcept
 		{
@@ -171,12 +171,12 @@ namespace CUSTOM_SET_REDBLACKTREE
 
 	/*
 		rbTree
-			- rbTreeNode·Î ±¸¼ºµÈ ·¹µåºí·¢Æ®¸®ÀÔ´Ï´Ù.
+			- rbTreeNodeë¡œ êµ¬ì„±ëœ ë ˆë“œë¸”ëž™íŠ¸ë¦¬ìž…ë‹ˆë‹¤.
 
-		#0. DATA´Â º¸°üÇÒ µ¥ÀÌÅÍ, KEY_TYPEÀº GetKey()ÀÇ ÀÚ·áÇüÀÔ´Ï´Ù.
-		#1. pNullNode¸¦ »ç¿ëÇÕ´Ï´Ù. ( = NIL)
+		#0. DATAëŠ” ë³´ê´€í•  ë°ì´í„°, KEY_TYPEì€ GetKey()ì˜ ìžë£Œí˜•ìž…ë‹ˆë‹¤.
+		#1. pNullNodeë¥¼ ì‚¬ìš©í•©ë‹ˆë‹¤. ( = NIL)
 
-		!0. rbTreeNode´Â rbTreeNodeÀÇ ÁÖÀÇ»çÇ×À» ÃæÁ·ÇØ¾ßÇÕ´Ï´Ù.
+		!0. rbTreeNodeëŠ” rbTreeNodeì˜ ì£¼ì˜ì‚¬í•­ì„ ì¶©ì¡±í•´ì•¼í•©ë‹ˆë‹¤.
 	*/
 	template <typename DATA, typename KEY_TYPE>
 	class rbTree
@@ -196,7 +196,7 @@ namespace CUSTOM_SET_REDBLACKTREE
 		rbTree<DATA, KEY_TYPE>() noexcept
 			: pNullNode(new rbTreeNode<DATA, KEY_TYPE>()), pRoot(pNullNode)
 		{
-			/* ¾Æ·¡, ÄÚµåµéÀº, rbTreeNode::rbTreeNode()ÀÇ »ý¼ºÀÚ¿¡¼­ º¸ÀåµË´Ï´Ù.  In Node Construct rbTreeNode::rbTreeNode()
+			/* ì•„ëž˜, ì½”ë“œë“¤ì€, rbTreeNode::rbTreeNode()ì˜ ìƒì„±ìžì—ì„œ ë³´ìž¥ë©ë‹ˆë‹¤.  In Node Construct rbTreeNode::rbTreeNode()
 				pRoot = pNullNode;
 				pNullNode->up = 0;
 				pNullNode->left = 0;
@@ -206,22 +206,27 @@ namespace CUSTOM_SET_REDBLACKTREE
 		};
 
 		/*
-			!0. ÀÌ ¿¹Á¦ÀÇ ¼Ò¸êÀÚ¿¡¼­´Â pRoot, pNullNode¸¦ Á¦¿ÜÇÏ°í´Â delete¸¦ º¸ÀåÇÏÁö ¾Ê½À´Ï´Ù.
+			!0. 190110ë¶€í„°, ì†Œë©¸ìžì— Clearê°€ ì¶”ê°€ë˜ì–´, ë©”ëª¨ë¦¬ë¥¼ ëª¨ë‘ ë°˜ë‚©í•©ë‹ˆë‹¤.
 		*/
 		~rbTree<DATA, KEY_TYPE>()
 		{
-			/*if (pRoot != nullptr) */
-				delete pRoot;
+			Clear();
 
-			/*if (pNullNode != nullptr) */
-				delete pNullNode;
+			if (pNullNode == pRoot)
+			{
+				pRoot = nullptr;
+			}
+
+			delete pRoot;
+			delete pNullNode;
 		};
 
 	public:
-		_NODISCARD DATA					Search(const KEY_TYPE& InKey, bool& RetResult) const;		// ÇØ´ç Key°ªÀ¸·Î °Ë»öÇÏ¿©, True½Ã ³ëµå Æ÷ÀÎÅÍ ¸®ÅÏ, False½Ã ¾øÀ½(pNullNode Return). 
-		void							Insert(const DATA& InDATA);									// ÇØ´ç key°ª°ú, Value °ªÀ» °¡Áö°í, ³»ºÎ¿¡¼­ ÇÒ´çÇÏ¿© Æ®¸®¿¡ »ðÀÔ ÈÄ, ÇØ´ç ³ëµå¿¡ ´ëÇÑ Æ÷ÀÎÅÍ ¸®ÅÏ.
-		void							Delete(_Node* pDeletedNode);								// ÀÎÀÚ·Î Àü´ÞµÈ ³ëµåÀÇ Æ÷ÀÎÅÍ¸¦ ÅëÇØ, ÇØ´ç ³ëµå¸¦ Á¦°ÅÇØÁÝ´Ï´Ù.
-		bool							DeleteWithSearch(const KEY_TYPE& InKey);					// ÇØ´ç Å°¿¡ ÇØ´çÇÏ´Â ³ëµå¸¦ Ã£¾Æ Á¦°ÅÇØÁÝ´Ï´Ù.
+		_NODISCARD DATA					Search(const KEY_TYPE& InKey, bool& RetResult) const;		// í•´ë‹¹ Keyê°’ìœ¼ë¡œ ê²€ìƒ‰í•˜ì—¬, Trueì‹œ ë…¸ë“œ í¬ì¸í„° ë¦¬í„´, Falseì‹œ ì—†ìŒ(pNullNode Return). 
+		void							Insert(const DATA& InDATA);									// í•´ë‹¹ keyê°’ê³¼, Value ê°’ì„ ê°€ì§€ê³ , ë‚´ë¶€ì—ì„œ í• ë‹¹í•˜ì—¬ íŠ¸ë¦¬ì— ì‚½ìž… í›„, í•´ë‹¹ ë…¸ë“œì— ëŒ€í•œ í¬ì¸í„° ë¦¬í„´.
+		void							Delete(_Node* pDeletedNode);								// ì¸ìžë¡œ ì „ë‹¬ëœ ë…¸ë“œì˜ í¬ì¸í„°ë¥¼ í†µí•´, í•´ë‹¹ ë…¸ë“œë¥¼ ì œê±°í•´ì¤ë‹ˆë‹¤.
+		bool							DeleteWithSearch(const KEY_TYPE& InKey);					// í•´ë‹¹ í‚¤ì— í•´ë‹¹í•˜ëŠ” ë…¸ë“œë¥¼ ì°¾ì•„ ì œê±°í•´ì¤ë‹ˆë‹¤.
+		void							Clear();													// pNullNodeë¥¼ ì œì™¸í•˜ê³  ëª¨ë“  ë‹¤ë¥¸ ë…¸ë“œì˜ ë©”ëª¨ë¦¬ë¥¼ ë°˜ë‚©í•©ë‹ˆë‹¤.
 
 	private:
 		void							_ChangeForInsert(_Node* RetNode);
@@ -252,41 +257,41 @@ namespace CUSTOM_SET_REDBLACKTREE
 
 	/*
 		Search(const KEY_TYPE& InKey, bool& RetResult) 
-			- ÁÖ¾îÁø Å° °ªÀ» °¡Áö°í, Æ®¸®¿¡¼­ ÇØ´ç Å° °ªÀ» °¡Áø ³ëµå¸¦ Ã£¾Æ ³ëµåÀÇ µ¥ÀÌÅÍ¸¦ ¹ÝÈ¯
+			- ì£¼ì–´ì§„ í‚¤ ê°’ì„ ê°€ì§€ê³ , íŠ¸ë¦¬ì—ì„œ í•´ë‹¹ í‚¤ ê°’ì„ ê°€ì§„ ë…¸ë“œë¥¼ ì°¾ì•„ ë…¸ë“œì˜ ë°ì´í„°ë¥¼ ë°˜í™˜
 
-		ÀÎÀÚ : Å½»öÇÏ·Á´Â ³ëµåÀÇ Å° °ª, Å½»ö ¼º°ø ¿©ºÎ
-		Ãâ·Â : µ¥ÀÌÅÍ(¸®ÅÏ°ª), Å½»ö ¼º°ø ¿©ºÎ(ÀÎÀÚ)
+		ì¸ìž : íƒìƒ‰í•˜ë ¤ëŠ” ë…¸ë“œì˜ í‚¤ ê°’, íƒìƒ‰ ì„±ê³µ ì—¬ë¶€
+		ì¶œë ¥ : ë°ì´í„°(ë¦¬í„´ê°’), íƒìƒ‰ ì„±ê³µ ì—¬ë¶€(ì¸ìž)
 
-		!0. RetResult°¡ falseÀÏ ¶§, ¿¹¿ÜÃ³¸®°¡ ÇÊ¿äÇÕ´Ï´Ù.
+		!0. RetResultê°€ falseì¼ ë•Œ, ì˜ˆì™¸ì²˜ë¦¬ê°€ í•„ìš”í•©ë‹ˆë‹¤.
 	*/
 
 	template <typename DATA, typename KEY_TYPE>
 	DATA rbTree<DATA, KEY_TYPE>::Search(const KEY_TYPE& InKey, bool& RetResult) const
 	{
-		// ÃÖÃÊ Search °á°ú¸¦ °ÅÁþÀ¸·Î µÒ.
+		// ìµœì´ˆ Search ê²°ê³¼ë¥¼ ê±°ì§“ìœ¼ë¡œ ë‘ .
 		RetResult = false;
 
-		// ¸®ÅÏÇÒ Æ÷ÀÎÅÍ¸¦ ¼±¾ðÇÏ°í, pRootNode·Î ¼³Á¤ÇÔ.
+		// ë¦¬í„´í•  í¬ì¸í„°ë¥¼ ì„ ì–¸í•˜ê³ , pRootNodeë¡œ ì„¤ì •í•¨.
 		rbTreeNode<DATA, KEY_TYPE>*  pRetNodeBuffer = pRoot;
 
-		// ºùºùºù~~~
+		// ë¹™ë¹™ë¹™~~~
 		while (true)
 		{
-			// ¸®ÅÏÇÒ ³ëµå Æ÷ÀÎÅÍ (°Ë»çÇÏ´Â ³ëµå) °¡ pNullNodeÀÏ¶§ ( False ) 
+			// ë¦¬í„´í•  ë…¸ë“œ í¬ì¸í„° (ê²€ì‚¬í•˜ëŠ” ë…¸ë“œ) ê°€ pNullNodeì¼ë•Œ ( False ) 
 			if (pRetNodeBuffer == pNullNode)
 			{
 				RetResult = false;
-				return pRetNodeBuffer->GetData();	// ¿¡·¯°¡´É¼º Á¸ÀçÇÕ´Ï´Ù. dataÀÇ ±âº»»ý¼ºÀÚ¿¡ ÀÇÇØ »ý¼ºµÈ µ¥ÀÌÅÍ ¹ÝÈ¯
+				return pRetNodeBuffer->GetData();	// ì—ëŸ¬ê°€ëŠ¥ì„± ì¡´ìž¬í•©ë‹ˆë‹¤. dataì˜ ê¸°ë³¸ìƒì„±ìžì— ì˜í•´ ìƒì„±ëœ ë°ì´í„° ë°˜í™˜
 			}
 
-			// Ã£´Â Å° (ÇÔ¼ö ÀÎÀÚ)¿Í ÇöÀç °Ë»çÇÏ´Â ³ëµåÀÇ Å°°¡ µ¿ÀÏÇÒ ¶§, (True)
+			// ì°¾ëŠ” í‚¤ (í•¨ìˆ˜ ì¸ìž)ì™€ í˜„ìž¬ ê²€ì‚¬í•˜ëŠ” ë…¸ë“œì˜ í‚¤ê°€ ë™ì¼í•  ë•Œ, (True)
 			if (InKey == pRetNodeBuffer->GetKey())
 			{
 				RetResult = true;
 				return pRetNodeBuffer->GetData();
 			}
 
-			// Å° ºñ±³¸¦ ÅëÇÑ, Left Or Right °áÁ¤ (Æ®¸® ±¸Á¶¿¡¼­ÀÇ Å½»ö)
+			// í‚¤ ë¹„êµë¥¼ í†µí•œ, Left Or Right ê²°ì • (íŠ¸ë¦¬ êµ¬ì¡°ì—ì„œì˜ íƒìƒ‰)
 			if (InKey < pRetNodeBuffer->GetKey())
 				pRetNodeBuffer = pRetNodeBuffer->left;
 			else
@@ -299,36 +304,36 @@ namespace CUSTOM_SET_REDBLACKTREE
 
 	/*
 		Insert(const DATA& InDATA)
-			- ÀÎÀÚ·Î Á¦°øµÇ´Â ÇØ´ç µ¥ÀÌÅÍ¸¦ °¡Áö´Â ³ëµå¸¦ ¸¸µé¾î »ðÀÔÇÏ´Â ÇÔ¼ö.
+			- ì¸ìžë¡œ ì œê³µë˜ëŠ” í•´ë‹¹ ë°ì´í„°ë¥¼ ê°€ì§€ëŠ” ë…¸ë“œë¥¼ ë§Œë“¤ì–´ ì‚½ìž…í•˜ëŠ” í•¨ìˆ˜.
 	
-		ÀÎÀÚ : ³ëµåÀÇ Å°, µ¥ÀÌÅÍ
-		Ãâ·Â : ÇØ´ç ³ëµå¿¡ ´ëÇÑ Æ÷ÀÎÅÍ Á¦°ø.
+		ì¸ìž : ë…¸ë“œì˜ í‚¤, ë°ì´í„°
+		ì¶œë ¥ : í•´ë‹¹ ë…¸ë“œì— ëŒ€í•œ í¬ì¸í„° ì œê³µ.
 		
-		!0. ±âÁ¸¿¡ Æ®¸®¿¡ Á¸ÀçÇÏ´Â ³ëµå¿¡ ´ëÇÑ µ¿ÀÏÇÑ Å°°ª¿¡ ´ëÇÏ¿© Insert¸¦ ¿äÃ»ÇÒ °æ¿ì, ¿À·ùÀÇ ¿øÀÎÀÌ µÉ ¼ö ÀÖ½À´Ï´Ù.
-		!1. ³»ºÎ¿¡¼­ Node¿¡ ´ëÇÑ ÇÒ´ç(new) °¡ ÀÏ¾î³³´Ï´Ù... Insert¸¦ Mutex·Î LockÇÏÁö ¸¶¼¼¿ä!
+		!0. ê¸°ì¡´ì— íŠ¸ë¦¬ì— ì¡´ìž¬í•˜ëŠ” ë…¸ë“œì— ëŒ€í•œ ë™ì¼í•œ í‚¤ê°’ì— ëŒ€í•˜ì—¬ Insertë¥¼ ìš”ì²­í•  ê²½ìš°, ì˜¤ë¥˜ì˜ ì›ì¸ì´ ë  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+		!1. ë‚´ë¶€ì—ì„œ Nodeì— ëŒ€í•œ í• ë‹¹(new) ê°€ ì¼ì–´ë‚©ë‹ˆë‹¤... Insertë¥¼ Mutexë¡œ Lockí•˜ì§€ ë§ˆì„¸ìš”!
 	*/
 
 	template <typename DATA, typename KEY_TYPE>
 	/* _Node* */ void rbTree<DATA, KEY_TYPE>::Insert(const DATA& InData)
 	{
-#pragma region [ »ðÀÔÇÒ ³ëµå ÇÒ´ç & ÇÊ¿äÇÑ Æ÷ÀÎÅÍ º¯¼ö Á¤ÀÇ ]
+#pragma region [ ì‚½ìž…í•  ë…¸ë“œ í• ë‹¹ & í•„ìš”í•œ í¬ì¸í„° ë³€ìˆ˜ ì •ì˜ ]
 
-		// ¸®ÅÏÇÒ ³ëµåÀÇ Æ÷ÀÎÅÍ¸¦ ¼±¾ðÇÏ°í, ÇÒ´çÇØÁÝ´Ï´Ù. ( Key, Value´Â ÀÎÀÚ Àü´Þ (Node¿¡¼­ »ý¼ºÀÚ Á¤ÀÇµÊ)
+		// ë¦¬í„´í•  ë…¸ë“œì˜ í¬ì¸í„°ë¥¼ ì„ ì–¸í•˜ê³ , í• ë‹¹í•´ì¤ë‹ˆë‹¤. ( Key, ValueëŠ” ì¸ìž ì „ë‹¬ (Nodeì—ì„œ ìƒì„±ìž ì •ì˜ë¨)
 		rbTreeNode<DATA, KEY_TYPE>* pRetNode = new rbTreeNode<DATA, KEY_TYPE>(InData, pNullNode, RED);
 
-		// ÇÊ¿äÇÑ Æ÷ÀÎÅÍµéÀ» »ý¼ºÇÕ´Ï´Ù.
-		rbTreeNode<DATA, KEY_TYPE>* pTraversalNode = pRoot;			// ¼øÈ¸³ëµå¹öÆÛ, ¸®ÅÏ ³ëµåÀÇ À§Ä¡¸¦ Å½»öÇÏ±â À§ÇØ ¼øÈ¸ÇÏ´Â Æ÷ÀÎÅÍÀÔ´Ï´Ù.
-		rbTreeNode<DATA, KEY_TYPE>* pParentNode = pNullNode;		// ºÎ¸ð³ëµå¹öÆÛ, ºÎ¸ð ³ëµå¸¦ ÀúÀåÇØµÎ±â À§ÇÑ Æ÷ÀÎÅÍÀÔ´Ï´Ù.
+		// í•„ìš”í•œ í¬ì¸í„°ë“¤ì„ ìƒì„±í•©ë‹ˆë‹¤.
+		rbTreeNode<DATA, KEY_TYPE>* pTraversalNode = pRoot;			// ìˆœíšŒë…¸ë“œë²„í¼, ë¦¬í„´ ë…¸ë“œì˜ ìœ„ì¹˜ë¥¼ íƒìƒ‰í•˜ê¸° ìœ„í•´ ìˆœíšŒí•˜ëŠ” í¬ì¸í„°ìž…ë‹ˆë‹¤.
+		rbTreeNode<DATA, KEY_TYPE>* pParentNode = pNullNode;		// ë¶€ëª¨ë…¸ë“œë²„í¼, ë¶€ëª¨ ë…¸ë“œë¥¼ ì €ìž¥í•´ë‘ê¸° ìœ„í•œ í¬ì¸í„°ìž…ë‹ˆë‹¤.
 
 #pragma endregion
-#pragma region [ »ðÀÔÇÏ´Â ³ëµåÀÇ ÀÚ½Ä³ëµå ¹× »ö ¼³Á¤ ]
+#pragma region [ ì‚½ìž…í•˜ëŠ” ë…¸ë“œì˜ ìžì‹ë…¸ë“œ ë° ìƒ‰ ì„¤ì • ]
 		/*
-		»ðÀÔÇÑ ³ëµå ÈÄÃ³¸®ÀÔ´Ï´Ù. 
-			1. ÀÚ½Ä ÁÂ, ¿ì´Â pNullNode·Î ¼³Á¤ÇØÁÝ´Ï´Ù. 
-			2. ·¹µå - ºí·¢Æ®¸® ¹ýÄ¢¿¡ ÀÇÇØ, »ðÀÔÇÑ ³ëµåÀÇ »öÀº RED(TRUE)·Î ¼³Á¤ÇØÁÝ´Ï´Ù.
+		ì‚½ìž…í•œ ë…¸ë“œ í›„ì²˜ë¦¬ìž…ë‹ˆë‹¤. 
+			1. ìžì‹ ì¢Œ, ìš°ëŠ” pNullNodeë¡œ ì„¤ì •í•´ì¤ë‹ˆë‹¤. 
+			2. ë ˆë“œ - ë¸”ëž™íŠ¸ë¦¬ ë²•ì¹™ì— ì˜í•´, ì‚½ìž…í•œ ë…¸ë“œì˜ ìƒ‰ì€ RED(TRUE)ë¡œ ì„¤ì •í•´ì¤ë‹ˆë‹¤.
 			
-			À§ÀÇ 1,2¸¦ ÄÚµå·Î ÀÛ¼ºÇÏ¸é ¾Æ·¡ 3ÁÙ°ú µ¿ÀÏÇÏ¸ç, 
-			rbTreeNodeÀÇ »ý¼ºÀÚ¿¡¼­ Ã³¸®ÇØÁÝ´Ï´Ù.
+			ìœ„ì˜ 1,2ë¥¼ ì½”ë“œë¡œ ìž‘ì„±í•˜ë©´ ì•„ëž˜ 3ì¤„ê³¼ ë™ì¼í•˜ë©°, 
+			rbTreeNodeì˜ ìƒì„±ìžì—ì„œ ì²˜ë¦¬í•´ì¤ë‹ˆë‹¤.
 			
 			pRetNode->left = pNullNode;
 			pRetNode->right = pNullNode;
@@ -336,104 +341,104 @@ namespace CUSTOM_SET_REDBLACKTREE
 		*/
 
 #pragma endregion
-#pragma region [ »ðÀÔÇÏ´Â ³ëµåÀÇ ºÎ¸ð³ëµå Ã£±â ]
+#pragma region [ ì‚½ìž…í•˜ëŠ” ë…¸ë“œì˜ ë¶€ëª¨ë…¸ë“œ ì°¾ê¸° ]
 		
 		/*
-			»ðÀÔµÉ ¼ö ÀÖ´Â ºó ÀÚ¸®±îÁö ÀÌµ¿ÇÕ´Ï´Ù.
+			ì‚½ìž…ë  ìˆ˜ ìžˆëŠ” ë¹ˆ ìžë¦¬ê¹Œì§€ ì´ë™í•©ë‹ˆë‹¤.
 			pTraversalNode
-				- pRetNode°¡ »ðÀÔµÉ ¼ö ÀÖ´Â À§Ä¡(Á¤È®È÷´Â Æ®¸®ÀÇ ¸®ÇÁ³ëµåÀÇ ÀÚ½Ä)±îÁö ÀÌµ¿ÇÏ´Â ³ëµå-Æ÷ÀÎÅÍ ÀÔ´Ï´Ù.
+				- pRetNodeê°€ ì‚½ìž…ë  ìˆ˜ ìžˆëŠ” ìœ„ì¹˜(ì •í™•ížˆëŠ” íŠ¸ë¦¬ì˜ ë¦¬í”„ë…¸ë“œì˜ ìžì‹)ê¹Œì§€ ì´ë™í•˜ëŠ” ë…¸ë“œ-í¬ì¸í„° ìž…ë‹ˆë‹¤.
 			pParentNode
-				- pNodeAÀÇ ÀÌÀü while¹®¿¡¼­ÀÇ À§Ä¡( ÇöÀç pNodeAÀÇ ºÎ¸ð ³ëµå Æ÷ÀÎÅÍ) ÀÔ´Ï´Ù.
+				- pNodeAì˜ ì´ì „ whileë¬¸ì—ì„œì˜ ìœ„ì¹˜( í˜„ìž¬ pNodeAì˜ ë¶€ëª¨ ë…¸ë“œ í¬ì¸í„°) ìž…ë‹ˆë‹¤.
 		*/
 		while (pTraversalNode != pNullNode)
 		{
-			//ÇöÀç À§Ä¡¸¦ pParentNode¿¡ ÀúÀåÇÏ°í, ´ÙÀ½ À§Ä¡·Î ÀÌµ¿ÇÕ´Ï´Ù.
+			//í˜„ìž¬ ìœ„ì¹˜ë¥¼ pParentNodeì— ì €ìž¥í•˜ê³ , ë‹¤ìŒ ìœ„ì¹˜ë¡œ ì´ë™í•©ë‹ˆë‹¤.
 			pParentNode = pTraversalNode;
 
-			//Å° ºñ±³¸¦ ÅëÇØ, ÀûÇÕÇÑ ³ëµåÀÇ À§Ä¡ (Left Or Right)¸¦ °áÁ¤ÇÕ´Ï´Ù. (Æ®¸® ±¸Á¶¿¡¼­ÀÇ Å½»ö)
+			//í‚¤ ë¹„êµë¥¼ í†µí•´, ì í•©í•œ ë…¸ë“œì˜ ìœ„ì¹˜ (Left Or Right)ë¥¼ ê²°ì •í•©ë‹ˆë‹¤. (íŠ¸ë¦¬ êµ¬ì¡°ì—ì„œì˜ íƒìƒ‰)
 			if (pRetNode->GetKey() /* == InKey */ < pTraversalNode->GetKey())
 				pTraversalNode = pTraversalNode->left;
 			else
 				pTraversalNode = pTraversalNode->right;
 		}
 
-		// ¸®ÅÏÇÏ´Â Æ÷ÀÎÅÍÀÇ up Point(ºÎ¸ð ³ëµå À§Ä¡)¿¡ ¸ÕÀú, pParentNode(ÀÌÀü ³ëµå Æ÷ÀÎÅÍ - ºÎ¸ð À§Ä¡)¸¦ ³Ö¾îÁÝ´Ï´Ù.
+		// ë¦¬í„´í•˜ëŠ” í¬ì¸í„°ì˜ up Point(ë¶€ëª¨ ë…¸ë“œ ìœ„ì¹˜)ì— ë¨¼ì €, pParentNode(ì´ì „ ë…¸ë“œ í¬ì¸í„° - ë¶€ëª¨ ìœ„ì¹˜)ë¥¼ ë„£ì–´ì¤ë‹ˆë‹¤.
 		pRetNode->up = pParentNode;
 #pragma endregion
-#pragma region [ »ðÀÔÇÏ´Â ³ëµåÀÇ À§Ä¡ Á¤ÇÏ±â ]
+#pragma region [ ì‚½ìž…í•˜ëŠ” ë…¸ë“œì˜ ìœ„ì¹˜ ì •í•˜ê¸° ]
 
-		// ÇöÀç ºÎ¸ð ³ëµå(RetNode->up == oldBuffer)°¡ pNullNodeÀÏ °æ¿ì, »ðÀÔÇÑ ³ëµå´Â Æ®¸®ÀÇ pRoot³ëµå°¡ µË´Ï´Ù.
+		// í˜„ìž¬ ë¶€ëª¨ ë…¸ë“œ(RetNode->up == oldBuffer)ê°€ pNullNodeì¼ ê²½ìš°, ì‚½ìž…í•œ ë…¸ë“œëŠ” íŠ¸ë¦¬ì˜ pRootë…¸ë“œê°€ ë©ë‹ˆë‹¤.
 		if (pParentNode == pNullNode)
 		{
 			pRoot = pRetNode;
 		}
 		else
 		{
-			// Æ®¸®ÀÇ ÃÖÃÊ ³ëµå°¡ ¾Æ´Ò °æ¿ì, ºÎ¸ð ³ëµå( pParentNode == pRetNode->up)ÀÇ Å° °ª°ú ºñ±³ÇØ, ºÎ¸ð ³ëµå¿¡¼­ÀÇ À§Ä¡ (Left Or Right)¸¦ °áÁ¤ ÈÄ ¿¬°áÇØÁÝ´Ï´Ù.
+			// íŠ¸ë¦¬ì˜ ìµœì´ˆ ë…¸ë“œê°€ ì•„ë‹ ê²½ìš°, ë¶€ëª¨ ë…¸ë“œ( pParentNode == pRetNode->up)ì˜ í‚¤ ê°’ê³¼ ë¹„êµí•´, ë¶€ëª¨ ë…¸ë“œì—ì„œì˜ ìœ„ì¹˜ (Left Or Right)ë¥¼ ê²°ì • í›„ ì—°ê²°í•´ì¤ë‹ˆë‹¤.
 			if (pRetNode->GetKey() < pParentNode->GetKey() /* ==  pRetNode->up->GetKey()	*/)
 				pParentNode->left = pRetNode;
 			else
 				pParentNode->right = pRetNode;
 
-			// À§¿¡ »ç¿ëÇß´ø Æ÷ÀÎÆ® Àç»ç¿ë. ¿øº»À» Àß¸ø¾²´Â °æ¿ì ¹æÁö.
+			// ìœ„ì— ì‚¬ìš©í–ˆë˜ í¬ì¸íŠ¸ ìž¬ì‚¬ìš©. ì›ë³¸ì„ ìž˜ëª»ì“°ëŠ” ê²½ìš° ë°©ì§€.
 			pTraversalNode = pRetNode;
 
-			// »ðÀÔ ½Ã, ±ÕÇü ¿©ºÎ¸¦ °Ë»çÇÏ°í °ü·Ã ÇÊ¿ä Ã³¸®¸¦ ÇÏ´Â ÇÔ¼öÀÔ´Ï´Ù. ( [Insert Case 1 ] Ã¹ »ðÀÔÀÏ¶§´Â ÇÊ¿ä¾ø½À´Ï´Ù.(À§ÀÇ if¹®, -- if (pParentNode == pNullNode) )
+			// ì‚½ìž… ì‹œ, ê· í˜• ì—¬ë¶€ë¥¼ ê²€ì‚¬í•˜ê³  ê´€ë ¨ í•„ìš” ì²˜ë¦¬ë¥¼ í•˜ëŠ” í•¨ìˆ˜ìž…ë‹ˆë‹¤. ( [Insert Case 1 ] ì²« ì‚½ìž…ì¼ë•ŒëŠ” í•„ìš”ì—†ìŠµë‹ˆë‹¤.(ìœ„ì˜ ifë¬¸, -- if (pParentNode == pNullNode) )
 			_ChangeForInsert(pTraversalNode);
 		}
 
 #pragma endregion
-#pragma region [ ·çÆ® ³ëµåÀÇ °ËÁ¤»ö º¸Á¸ ]
-		// ·¹µå - ºí·¢Æ®¸® ¹ýÄ¢¿¡ ÀÇÇØ, ¾î¶² º¯È¯ÀÌ ÀÏ¾î³ªµç, ÃÖÁ¾ÀûÀ¸·Î Àû»ö³ª¹«¿¡¼­ÀÇ ·çÆ® ³ëµå´Â Ç×»ó °ËÁ¤»öÀ» À¯ÁöÇØ¾ßÇÕ´Ï´Ù.
+#pragma region [ ë£¨íŠ¸ ë…¸ë“œì˜ ê²€ì •ìƒ‰ ë³´ì¡´ ]
+		// ë ˆë“œ - ë¸”ëž™íŠ¸ë¦¬ ë²•ì¹™ì— ì˜í•´, ì–´ë–¤ ë³€í™˜ì´ ì¼ì–´ë‚˜ë“ , ìµœì¢…ì ìœ¼ë¡œ ì ìƒ‰ë‚˜ë¬´ì—ì„œì˜ ë£¨íŠ¸ ë…¸ë“œëŠ” í•­ìƒ ê²€ì •ìƒ‰ì„ ìœ ì§€í•´ì•¼í•©ë‹ˆë‹¤.
 		pRoot->color = BLACK;
 
-		////(µð¹ö±×)»ðÀÔ ÇÒ¶§¸¶´Ù, Æ®¸®¸¦ Ãâ·ÂÇÕ´Ï´Ù.
+		////(ë””ë²„ê·¸)ì‚½ìž… í• ë•Œë§ˆë‹¤, íŠ¸ë¦¬ë¥¼ ì¶œë ¥í•©ë‹ˆë‹¤.
 		//this->PrintTree();
 
-		// »ðÀÔÇÑ ³ëµå¸¦ ¸®ÅÏÇØÁÝ´Ï´Ù. -> ÀÌÁ¦´Â ¾ÈÇØÁÝ´Ï´Ù.
+		// ì‚½ìž…í•œ ë…¸ë“œë¥¼ ë¦¬í„´í•´ì¤ë‹ˆë‹¤. -> ì´ì œëŠ” ì•ˆí•´ì¤ë‹ˆë‹¤.
 		// return pRetNode;
 #pragma endregion
 	};
 
 	/*
 		_ChangeForInsert(rbTreeNode<DATA, KEY_TYPE>* RetNode);
-			- Insert ÇÔ¼ö ³»ºÎ¿¡¼­ »ç¿ëµÇ¸ç, ³ëµå¸¦ Insert ÇÏ´Â °úÁ¤ Áß¿¡, Red-Black TreeÀÇ Æ¯Â¡À» À¯ÁöÇÏ±â À§ÇØ °Ë»çÇÏ¸ç, ÇÊ¿ä ½Ã °ü·Ã Ã³¸®¸¦ ÇØÁÖ´Â ÇÔ¼öÀÔ´Ï´Ù.
+			- Insert í•¨ìˆ˜ ë‚´ë¶€ì—ì„œ ì‚¬ìš©ë˜ë©°, ë…¸ë“œë¥¼ Insert í•˜ëŠ” ê³¼ì • ì¤‘ì—, Red-Black Treeì˜ íŠ¹ì§•ì„ ìœ ì§€í•˜ê¸° ìœ„í•´ ê²€ì‚¬í•˜ë©°, í•„ìš” ì‹œ ê´€ë ¨ ì²˜ë¦¬ë¥¼ í•´ì£¼ëŠ” í•¨ìˆ˜ìž…ë‹ˆë‹¤.
 
-		ÀÎÀÚ : InsertµÈ ³ëµåÀÇ Æ÷ÀÎÅÍ
-		Ãâ·Â : void
+		ì¸ìž : Insertëœ ë…¸ë“œì˜ í¬ì¸í„°
+		ì¶œë ¥ : void
 		
-		#1. °ü·Ã ÀÌ·ÐÀº À§Å° ¹é°ú, ·¹µå-ºí·¢ Æ®¸®¸¦ È®ÀÎÇØ ÁÖ¼¼¿ä! https://ko.wikipedia.org/wiki/%EB%A0%88%EB%93%9C-%EB%B8%94%EB%9E%99_%ED%8A%B8%EB%A6%AC
+		#1. ê´€ë ¨ ì´ë¡ ì€ ìœ„í‚¤ ë°±ê³¼, ë ˆë“œ-ë¸”ëž™ íŠ¸ë¦¬ë¥¼ í™•ì¸í•´ ì£¼ì„¸ìš”! https://ko.wikipedia.org/wiki/%EB%A0%88%EB%93%9C-%EB%B8%94%EB%9E%99_%ED%8A%B8%EB%A6%AC
 	*/
 	template <typename DATA, typename KEY_TYPE>
 	void rbTree<DATA, KEY_TYPE>::_ChangeForInsert(_Node* pRetNode)
 	{
 	LIKE_RECURSION:
 
-		// [Insert Case 2] ÀÌ¹Ì ±âÁ¸ÀÇ Æ®¸®´Â, ·¹µå ºí·¢ Æ®¸®ÀÇ ¼ºÁúÀ» ¸¸Á·ÇÏ±â ¶§¹®¿¡, ºÎ¸ðÀÇ ³ëµå°¡ °ËÁ¤»öÀÏ °æ¿ì, °í·ÁÇÒ ÇÊ¿ä°¡ ¾ø½À´Ï´Ù. (-> °ÅÈñ ¸ðµç ¹®Á¦´Â ´õºí ·¹µå¿¡¼­ ¹ß»ýÇÕ´Ï´Ù.)  // ÇØ´ç Á¶°ÇÀº Insert Case 1µµ Æ÷ÇÔÇÏ´Â Á¶°ÇÀÔ´Ï´Ù.
+		// [Insert Case 2] ì´ë¯¸ ê¸°ì¡´ì˜ íŠ¸ë¦¬ëŠ”, ë ˆë“œ ë¸”ëž™ íŠ¸ë¦¬ì˜ ì„±ì§ˆì„ ë§Œì¡±í•˜ê¸° ë•Œë¬¸ì—, ë¶€ëª¨ì˜ ë…¸ë“œê°€ ê²€ì •ìƒ‰ì¼ ê²½ìš°, ê³ ë ¤í•  í•„ìš”ê°€ ì—†ìŠµë‹ˆë‹¤. (-> ê±°í¬ ëª¨ë“  ë¬¸ì œëŠ” ë”ë¸” ë ˆë“œì—ì„œ ë°œìƒí•©ë‹ˆë‹¤.)  // í•´ë‹¹ ì¡°ê±´ì€ Insert Case 1ë„ í¬í•¨í•˜ëŠ” ì¡°ê±´ìž…ë‹ˆë‹¤.
 		if (pRetNode->up->color == BLACK)
 		{
 			return;
 		}
 
 		rbTreeNode<DATA, KEY_TYPE>* pUncleNode = _GetUncleNode(pRetNode); // UncleNode Pointer  
-		rbTreeNode<DATA, KEY_TYPE>* pGrandNode = pRetNode->up->up; // Á¶ºÎ¸ð(¿ÕºÎ¸ð) ³ëµå --> nullptrÀÏ °æ¿ì´Â Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù. ( [Insert Case 1 - 2] ¿¡¼­ °É·¯Áý´Ï´Ù.)
+		rbTreeNode<DATA, KEY_TYPE>* pGrandNode = pRetNode->up->up; // ì¡°ë¶€ëª¨(ì™•ë¶€ëª¨) ë…¸ë“œ --> nullptrì¼ ê²½ìš°ëŠ” ì¡´ìž¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤. ( [Insert Case 1 - 2] ì—ì„œ ê±¸ëŸ¬ì§‘ë‹ˆë‹¤.)
 
-		// [Insert Case 3] Recoloring - ºÎ¸ð³ëµå¿Í UncleNode ¸ðµÎ »¡°£»öÀÏ ¶§, ÀÌ¸¦ ¸ðµÎ °ËÁ¤»öÀ¸·Î ¹Ù²Ù°í, Á¶ºÎ¸ð³ëµå¸¦ »¡°£»öÀ¸·Î º¯°æÇÕ´Ï´Ù. 
-		if (pUncleNode->color == RED /*&& pUncleNode != pNullNode // ÀÌ Á¶°ÇÀº »¡°£»ö¿¡ Æ÷ÇÔ. */)
+		// [Insert Case 3] Recoloring - ë¶€ëª¨ë…¸ë“œì™€ UncleNode ëª¨ë‘ ë¹¨ê°„ìƒ‰ì¼ ë•Œ, ì´ë¥¼ ëª¨ë‘ ê²€ì •ìƒ‰ìœ¼ë¡œ ë°”ê¾¸ê³ , ì¡°ë¶€ëª¨ë…¸ë“œë¥¼ ë¹¨ê°„ìƒ‰ìœ¼ë¡œ ë³€ê²½í•©ë‹ˆë‹¤. 
+		if (pUncleNode->color == RED /*&& pUncleNode != pNullNode // ì´ ì¡°ê±´ì€ ë¹¨ê°„ìƒ‰ì— í¬í•¨. */)
 		{
 			pRetNode->up->color = BLACK;
 			pUncleNode->color = BLACK;
 			pGrandNode->color = RED;
 
-			// ÀÌ Á¶ºÎ¸ð³ëµå¸¦ »¡°£»öÀ¸·Î º¯°æÇß±â ¶§¹®¿¡, ÀÌ¿¡ ´ëÇØ µ¿ÀÏÇÏ°Ô ·¹µåºí·¢Æ®¸® Á¶°Ç(´õºí ·¹µå Å×½ºÆ® ºÒÇã¿ë)¿¡ ´ëÇÑ °Ë»ç°¡ ÇÊ¿äÇÔ.
-			//_ChangeForInsert(pGrandNode); // <- Àç±ÍÇÔ¼ö¸¦ »ç¿ëÇÏÁö ¾ÊÀ½ ( ¸Þ¸ð¸® ¿À¹öÇìµå )
+			// ì´ ì¡°ë¶€ëª¨ë…¸ë“œë¥¼ ë¹¨ê°„ìƒ‰ìœ¼ë¡œ ë³€ê²½í–ˆê¸° ë•Œë¬¸ì—, ì´ì— ëŒ€í•´ ë™ì¼í•˜ê²Œ ë ˆë“œë¸”ëž™íŠ¸ë¦¬ ì¡°ê±´(ë”ë¸” ë ˆë“œ í…ŒìŠ¤íŠ¸ ë¶ˆí—ˆìš©)ì— ëŒ€í•œ ê²€ì‚¬ê°€ í•„ìš”í•¨.
+			//_ChangeForInsert(pGrandNode); // <- ìž¬ê·€í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ì§€ ì•ŠìŒ ( ë©”ëª¨ë¦¬ ì˜¤ë²„í—¤ë“œ )
 
-			// ³ëµå Æ÷ÀÎÅÍ¸¦ Á¶ºÎ¸ð ³ëµå·Î º¯°æ ÈÄ, goto¹®À¸·Î ÇÔ¼ö Ã¹Â°ÁÙ·Î ÀÌµ¿.
+			// ë…¸ë“œ í¬ì¸í„°ë¥¼ ì¡°ë¶€ëª¨ ë…¸ë“œë¡œ ë³€ê²½ í›„, gotoë¬¸ìœ¼ë¡œ í•¨ìˆ˜ ì²«ì§¸ì¤„ë¡œ ì´ë™.
 			pRetNode = pGrandNode;
 			goto LIKE_RECURSION;
 		}
 
-		// [Insert Case 4] Restructuring - ºÎ¸ð³ëµå´Â »¡°£»öÀÌ³ª, UncleNode´Â °ËÀº»öÀÏ ¶§, ¸ð¾ç¿¡ µû¶ó. ÀÛÀº È¸ÀüÀ» ÇØÁÜ ( Insert Case 4¸¦ °ÅÄ£ Æ®¸®´Â ´õºí ·¹µå »óÅÂ°¡ µÇ¸ç ±ÔÄ¢¿¡ À§¹Ý Insert Case 5¸¦ ÇÊ¼ö·Î °ÅÄ¡°Ô µË´Ï´Ù. )
+		// [Insert Case 4] Restructuring - ë¶€ëª¨ë…¸ë“œëŠ” ë¹¨ê°„ìƒ‰ì´ë‚˜, UncleNodeëŠ” ê²€ì€ìƒ‰ì¼ ë•Œ, ëª¨ì–‘ì— ë”°ë¼. ìž‘ì€ íšŒì „ì„ í•´ì¤Œ ( Insert Case 4ë¥¼ ê±°ì¹œ íŠ¸ë¦¬ëŠ” ë”ë¸” ë ˆë“œ ìƒíƒœê°€ ë˜ë©° ê·œì¹™ì— ìœ„ë°˜ Insert Case 5ë¥¼ í•„ìˆ˜ë¡œ ê±°ì¹˜ê²Œ ë©ë‹ˆë‹¤. )
 		if ((pRetNode == pRetNode->up->right) && (pRetNode->up == pGrandNode->left))
 		{
 			_LeftRotate(pRetNode->up);
@@ -446,7 +451,7 @@ namespace CUSTOM_SET_REDBLACKTREE
 			pRetNode = pRetNode->right;
 		}
 
-		// [Insert Case 5] ¿©±â±îÁö ¿ÔÀ¸¸é ¹«Á¶°ÇÀÌ¾ß ¸Þ·Õ
+		// [Insert Case 5] ì—¬ê¸°ê¹Œì§€ ì™”ìœ¼ë©´ ë¬´ì¡°ê±´ì´ì•¼ ë©”ë¡±
 		pGrandNode = pRetNode->up->up;
 
 		pRetNode->up->color = BLACK;
@@ -463,22 +468,22 @@ namespace CUSTOM_SET_REDBLACKTREE
 
 	/*
 		Delete(rbTreeNode<DATA, KEY_TYPE>* DeletedNode);
-			- ÀÎÀÚ·Î Á¦°øµÇ´Â ³ëµåÀÇ Æ÷ÀÎÅÍ¸¦ È°¿ëÇØ, ÇØ´ç ³ëµå¸¦ »èÁ¦ÇÕ´Ï´Ù!
+			- ì¸ìžë¡œ ì œê³µë˜ëŠ” ë…¸ë“œì˜ í¬ì¸í„°ë¥¼ í™œìš©í•´, í•´ë‹¹ ë…¸ë“œë¥¼ ì‚­ì œí•©ë‹ˆë‹¤!
 
-		ÀÎÀÚ : Á¦°ÅÇÏ·Á´Â ³ëµåÀÇ Æ÷ÀÎÅÍ
-		Ãâ·Â : void
+		ì¸ìž : ì œê±°í•˜ë ¤ëŠ” ë…¸ë“œì˜ í¬ì¸í„°
+		ì¶œë ¥ : void
 
-		#0. ±âÁ¸ ·¹µå - ºí·¢Æ®¸® ¹æ½Ä°ú Á¶±Ý ´Ù¸¥ Á¡Àº Copy Value°¡ ¾Æ´Ï¶ó, Node ÀÚÃ¼¸¦ º¯°æÇÏ´Â Á¡ÀÔ´Ï´Ù.
-		( ³»ºÎ¿¡¼­ Node¿¡ ´ëÇÑ ptr¸¦ È°¿ëÇÒ ¶§, ÀÌ¿¡ ´ëÇÑ ÂüÁ¶¸¦ º¸ÀåÇÏ±â À§ÇÔ.)
+		#0. ê¸°ì¡´ ë ˆë“œ - ë¸”ëž™íŠ¸ë¦¬ ë°©ì‹ê³¼ ì¡°ê¸ˆ ë‹¤ë¥¸ ì ì€ Copy Valueê°€ ì•„ë‹ˆë¼, Node ìžì²´ë¥¼ ë³€ê²½í•˜ëŠ” ì ìž…ë‹ˆë‹¤.
+		( ë‚´ë¶€ì—ì„œ Nodeì— ëŒ€í•œ ptrë¥¼ í™œìš©í•  ë•Œ, ì´ì— ëŒ€í•œ ì°¸ì¡°ë¥¼ ë³´ìž¥í•˜ê¸° ìœ„í•¨.)
 
-		!0. ³»ºÎ¿¡¼­ Node¿¡ ´ëÇÑ ¸Þ¸ð¸® È¸¼ö(delete) °¡ ÀÏ¾î³³´Ï´Ù.
+		!0. ë‚´ë¶€ì—ì„œ Nodeì— ëŒ€í•œ ë©”ëª¨ë¦¬ íšŒìˆ˜(delete) ê°€ ì¼ì–´ë‚©ë‹ˆë‹¤.
 
-		?0. deletedµÈ ³ëµåÀÇ Æ÷ÀÎÅÍ°¡ pNullNode¸¦ °¡¸£Å°¸é, nullptr °ü·Ã ¿¡·¯¸¦ ¹æÁöÇÏÁö ¾ÊÀ»±î?
+		?0. deletedëœ ë…¸ë“œì˜ í¬ì¸í„°ê°€ pNullNodeë¥¼ ê°€ë¥´í‚¤ë©´, nullptr ê´€ë ¨ ì—ëŸ¬ë¥¼ ë°©ì§€í•˜ì§€ ì•Šì„ê¹Œ?
 	*/
 	template <typename DATA, typename KEY_TYPE>
 	void rbTree<DATA, KEY_TYPE>::Delete(_Node* pDeletedNode)
 	{
-		// Á¦°ÅÇÏ·Á´Â ³ëµå°¡ pNullNode°¡ ¾Æ´ÑÁö È®ÀÎÇÕ´Ï´Ù. (pNullNode Á¦°ÅÇÏ¸é ¼¼»ó Å¬³³´Ï´Ù.)
+		// ì œê±°í•˜ë ¤ëŠ” ë…¸ë“œê°€ pNullNodeê°€ ì•„ë‹Œì§€ í™•ì¸í•©ë‹ˆë‹¤. (pNullNode ì œê±°í•˜ë©´ ì„¸ìƒ í´ë‚©ë‹ˆë‹¤.)
 		if (pDeletedNode == pNullNode)
 		{
 			return;
@@ -488,13 +493,13 @@ namespace CUSTOM_SET_REDBLACKTREE
 		rbTreeNode<DATA, KEY_TYPE>* pChildBuffer = pNullNode;
 		bool deletedNodeColor = BLACK;
 
-		// ÀÚ½Ä ³ëµå ¼ö °Ë»ç. --> µÎ°³ ´Ù »ì¾ÆÀÖÀ½.
+		// ìžì‹ ë…¸ë“œ ìˆ˜ ê²€ì‚¬. --> ë‘ê°œ ë‹¤ ì‚´ì•„ìžˆìŒ.
 		if (pDeletedNode->left != pNullNode && pDeletedNode->right != pNullNode)
 		{
 			pBuffer = _GetNextNode(pDeletedNode);
 			pChildBuffer = pBuffer->right;
 
-			// GetNextNode°¡ ¹Ù·Î, ´ÙÀ½ ¿ìÃø ÀÚ½ÄÀÏ ¶§´Â ¿¹¿ÜÇÊ¿ä.
+			// GetNextNodeê°€ ë°”ë¡œ, ë‹¤ìŒ ìš°ì¸¡ ìžì‹ì¼ ë•ŒëŠ” ì˜ˆì™¸í•„ìš”.
 			if (pDeletedNode->right == pBuffer)
 			{
 				if (pChildBuffer == pNullNode)
@@ -516,13 +521,13 @@ namespace CUSTOM_SET_REDBLACKTREE
 				pBuffer->up->left = pNullNode;
 			}
 
-			// NextNodeÀÇ Á¤º¸¸¦, pDeletedBuffer·Î Àü´ÞÇØÁÜ. (½ÇÁ¦ »èÁ¦ÇÏ´Â ³ëµå´Â pBufferÀÌ±â ‹š¹®¿¡) --> [DEV_55] (bug_3) nullptr ÂüÁ¶ ¿À·ù ¹ß»ý.
+			// NextNodeì˜ ì •ë³´ë¥¼, pDeletedBufferë¡œ ì „ë‹¬í•´ì¤Œ. (ì‹¤ì œ ì‚­ì œí•˜ëŠ” ë…¸ë“œëŠ” pBufferì´ê¸° Â‹Âšë¬¸ì—) --> [DEV_55] (bug_3) nullptr ì°¸ì¡° ì˜¤ë¥˜ ë°œìƒ.
 			// Data Copy
 			//pDeletedNode->key = pBuffer->key;
 			//pDeletedNode->value = pBuffer->value;
 
 			// (!Data) Copy
-			// À§ÀÇ Data Copy ½Ã¿¡´Â, ¸¸¾à ÇØ´ç pBufferÀÇ ptr¿¡ ÇØ´çÇÏ´Â ³ëµå¸¦ Æ÷ÀÎÅÍ·Î ÀúÀåÇÏ°í È°¿ëÇÏ´Â Æ÷ÀÎÅÍ º¯¼ö°¡ nullptr°¡ ÀÏ¾î³¯ °æ¿ì°¡ ÀÖ±â ¶§¹®¿¡ nodeSwapÀ» ÇØÁÜ.
+			// ìœ„ì˜ Data Copy ì‹œì—ëŠ”, ë§Œì•½ í•´ë‹¹ pBufferì˜ ptrì— í•´ë‹¹í•˜ëŠ” ë…¸ë“œë¥¼ í¬ì¸í„°ë¡œ ì €ìž¥í•˜ê³  í™œìš©í•˜ëŠ” í¬ì¸í„° ë³€ìˆ˜ê°€ nullptrê°€ ì¼ì–´ë‚  ê²½ìš°ê°€ ìžˆê¸° ë•Œë¬¸ì— nodeSwapì„ í•´ì¤Œ.
 			if (pDeletedNode->up == pNullNode)
 			{
 				pRoot = pBuffer;
@@ -535,48 +540,48 @@ namespace CUSTOM_SET_REDBLACKTREE
 					pDeletedNode->up->right = pBuffer;
 			}
 
-			// »èÁ¦ÇÏ´Â ³ëµåÀÇ ºÎ¸ð¿Í ¿¬°á
+			// ì‚­ì œí•˜ëŠ” ë…¸ë“œì˜ ë¶€ëª¨ì™€ ì—°ê²°
 			pBuffer->up = pDeletedNode->up;
 
-			// »èÁ¦ÇÏ´Â ³ëµåÀÇ ÀÚ½Äµé°ú ¿¬°á.
+			// ì‚­ì œí•˜ëŠ” ë…¸ë“œì˜ ìžì‹ë“¤ê³¼ ì—°ê²°.
 			pDeletedNode->left->up = pBuffer;
 			pBuffer->left = pDeletedNode->left;
 
-			// GetNextNode°¡ ¹Ù·Î, ´ÙÀ½ ¿ìÃø ÀÚ½ÄÀÏ ¶§´Â ¿¹¿ÜÇÊ¿ä.
+			// GetNextNodeê°€ ë°”ë¡œ, ë‹¤ìŒ ìš°ì¸¡ ìžì‹ì¼ ë•ŒëŠ” ì˜ˆì™¸í•„ìš”.
 			if (pDeletedNode->right != pBuffer)
 			{
 				pDeletedNode->right->up = pBuffer;
 				pBuffer->right = pDeletedNode->right;
 			}
 
-			// ÄÃ·¯ ¹öÆÛ ¼³Á¤.
+			// ì»¬ëŸ¬ ë²„í¼ ì„¤ì •.
 			deletedNodeColor = pBuffer->color;
 			pBuffer->color = pDeletedNode->color;
 		}
-		// ÀÚ½ÄÀÇ ¿ÞÂÊ ³ëµå¸¸ »ì¾ÆÀÖÀ½.
+		// ìžì‹ì˜ ì™¼ìª½ ë…¸ë“œë§Œ ì‚´ì•„ìžˆìŒ.
 		else if (pDeletedNode->left != pNullNode)
 		{
 			pBuffer = pDeletedNode;
 			pChildBuffer = pBuffer->left;
 
-			// ÀÚ½Ä¿¡°Ô »õ ºÎ¸ð ¾Ë¸².
+			// ìžì‹ì—ê²Œ ìƒˆ ë¶€ëª¨ ì•Œë¦¼.
 			pChildBuffer->up = pBuffer->up;
 
-			// »èÁ¦µÇ´Â ³ëµå°¡ root¿´À» °æ¿ì, ChildBuffer °¡ ÀÚ½ÄÀÌ µÇµµ·Ï ÇÔ.
+			// ì‚­ì œë˜ëŠ” ë…¸ë“œê°€ rootì˜€ì„ ê²½ìš°, ChildBuffer ê°€ ìžì‹ì´ ë˜ë„ë¡ í•¨.
 			if (pBuffer->up == pNullNode)
 				pRoot = pChildBuffer;
 			else
 			{
-				// pBufferÀÇ ºÎ¸ð¿¡°Ô, »õ ÀÚ½ÄÀ» ¾Ë·ÁÁÜ.
+				// pBufferì˜ ë¶€ëª¨ì—ê²Œ, ìƒˆ ìžì‹ì„ ì•Œë ¤ì¤Œ.
 				if (pBuffer->up->left == pBuffer)
 					pBuffer->up->left = pChildBuffer;
 				else
 					pBuffer->up->right = pChildBuffer;
 			}
-			// »ö ÀúÀå
+			// ìƒ‰ ì €ìž¥
 			deletedNodeColor = pBuffer->color;
 		}
-		// ÀÚ½ÄÀÇ ¿À¸¥ÂÊ ³ëµå¸¸ »ì¾ÆÀÖÀ½.
+		// ìžì‹ì˜ ì˜¤ë¥¸ìª½ ë…¸ë“œë§Œ ì‚´ì•„ìžˆìŒ.
 		else if (pDeletedNode->right != pNullNode)
 		{
 			pBuffer = pDeletedNode;
@@ -594,10 +599,10 @@ namespace CUSTOM_SET_REDBLACKTREE
 					pBuffer->up->right = pChildBuffer;
 			}
 
-			// »ö ÀúÀå
+			// ìƒ‰ ì €ìž¥
 			deletedNodeColor = pBuffer->color;
 		}
-		// ÀÚ½ÄÀÌ ¾øÀ½.
+		// ìžì‹ì´ ì—†ìŒ.
 		else
 		{
 			pBuffer = pDeletedNode;
@@ -617,7 +622,7 @@ namespace CUSTOM_SET_REDBLACKTREE
 					pBuffer->up->right = pNullNode;
 			}
 
-			// »ö ÀúÀå
+			// ìƒ‰ ì €ìž¥
 			deletedNodeColor = pBuffer->color;
 		}
 
@@ -642,12 +647,12 @@ namespace CUSTOM_SET_REDBLACKTREE
 
 	/*
 		_ChangeForDelete(rbTreeNode<DATA, KEY_TYPE>* pInNode);
-			- Delete ÇÔ¼ö ³»ºÎ¿¡¼­ »ç¿ëµÇ¸ç, ³ëµå¸¦ Delete ÇÑ ÈÄ¿¡µµ, Red-Black TreeÀÇ Æ¯Â¡À» À¯ÁöÇÏ±â À§ÇØ °Ë»ç ÈÄ, ÇÊ¿ä ½Ã Ã³¸®¸¦ ÇØÁÖ´Â ÇÔ¼öÀÔ´Ï´Ù.
+			- Delete í•¨ìˆ˜ ë‚´ë¶€ì—ì„œ ì‚¬ìš©ë˜ë©°, ë…¸ë“œë¥¼ Delete í•œ í›„ì—ë„, Red-Black Treeì˜ íŠ¹ì§•ì„ ìœ ì§€í•˜ê¸° ìœ„í•´ ê²€ì‚¬ í›„, í•„ìš” ì‹œ ì²˜ë¦¬ë¥¼ í•´ì£¼ëŠ” í•¨ìˆ˜ìž…ë‹ˆë‹¤.
 
-		ÀÎÀÚ : DeleteÇÒ ³ëµåÀÇ NextNode( Successor )ÀÇ ChildNode (dir - Right)
-		Ãâ·Â : void
+		ì¸ìž : Deleteí•  ë…¸ë“œì˜ NextNode( Successor )ì˜ ChildNode (dir - Right)
+		ì¶œë ¥ : void
 		
-		#0. °ü·Ã ÀÌ·ÐÀº À§Å° ¹é°ú, ·¹µå-ºí·¢ Æ®¸®¸¦ È®ÀÎÇØ ÁÖ¼¼¿ä! https://ko.wikipedia.org/wiki/%EB%A0%88%EB%93%9C-%EB%B8%94%EB%9E%99_%ED%8A%B8%EB%A6%AC
+		#0. ê´€ë ¨ ì´ë¡ ì€ ìœ„í‚¤ ë°±ê³¼, ë ˆë“œ-ë¸”ëž™ íŠ¸ë¦¬ë¥¼ í™•ì¸í•´ ì£¼ì„¸ìš”! https://ko.wikipedia.org/wiki/%EB%A0%88%EB%93%9C-%EB%B8%94%EB%9E%99_%ED%8A%B8%EB%A6%AC
 	*/
 	template <typename DATA, typename KEY_TYPE>
 	void rbTree<DATA, KEY_TYPE>::_ChangeForDelete(_Node* pInNode)
@@ -666,10 +671,10 @@ namespace CUSTOM_SET_REDBLACKTREE
 			pInNode->up->color = RED;
 			pSiblingNode->color = BLACK;
 
-			// Çö ³ëµå°¡, ºÎ¸ðÀÇ ¿ÞÂÊ ÀÚ½ÄÀÏ °æ¿ì
+			// í˜„ ë…¸ë“œê°€, ë¶€ëª¨ì˜ ì™¼ìª½ ìžì‹ì¼ ê²½ìš°
 			if (pInNode == pInNode->up->left)
 				_LeftRotate(pInNode->up);
-			// Çö ³ëµå°¡, ºÎ¸ðÀÇ ¿À¸¥ÂÊ ÀÚ½ÄÀÏ °æ¿ì
+			// í˜„ ë…¸ë“œê°€, ë¶€ëª¨ì˜ ì˜¤ë¥¸ìª½ ìžì‹ì¼ ê²½ìš°
 			else
 				_RightRotate(pInNode->up);
 		}
@@ -734,16 +739,16 @@ namespace CUSTOM_SET_REDBLACKTREE
 
 	/*
 		DeleteWithSearch(const DATA& InKey);
-			- Å°¸¦ ÀÎÀÚ·Î ¹Þ¾Æ, ÇØ´ç Å°¿¡ ÇØ´çÇÏ´Â ³ëµå¸¦ Ã£°í, ±× ³ëµå¸¦ »èÁ¦ÇÕ´Ï´Ù, ÇØ´çÇÏ´Â Å° °ªÀ» °¡Áø ³ëµå°¡ ¾øÀ» ½Ã, »èÁ¦ÇÏÁö ¾Ê½À´Ï´Ù.
+			- í‚¤ë¥¼ ì¸ìžë¡œ ë°›ì•„, í•´ë‹¹ í‚¤ì— í•´ë‹¹í•˜ëŠ” ë…¸ë“œë¥¼ ì°¾ê³ , ê·¸ ë…¸ë“œë¥¼ ì‚­ì œí•©ë‹ˆë‹¤, í•´ë‹¹í•˜ëŠ” í‚¤ ê°’ì„ ê°€ì§„ ë…¸ë“œê°€ ì—†ì„ ì‹œ, ì‚­ì œí•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.
 
-		ÀÎÀÚ : Á¦°ÅÇÏ·Á´Â ³ëµåÀÇ Å°°ª.
-		Ãâ·Â : bool°ª - ³ëµå »èÁ¦ ¿©ºÎ ( == ÇØ´ç Å°¸¦ °¡Áø ³ëµåÀÇ Á¸Àç ¿©ºÎ )
+		ì¸ìž : ì œê±°í•˜ë ¤ëŠ” ë…¸ë“œì˜ í‚¤ê°’.
+		ì¶œë ¥ : boolê°’ - ë…¸ë“œ ì‚­ì œ ì—¬ë¶€ ( == í•´ë‹¹ í‚¤ë¥¼ ê°€ì§„ ë…¸ë“œì˜ ì¡´ìž¬ ì—¬ë¶€ )
 	
-		#0. Ptr¸¦ »ç¿ëÇÏ´Â »èÁ¦ ÇÔ¼ö (Delete) º¸´Ù ´ç¿¬È÷ ¹«°Ì½À´Ï´Ù. (Search Ãß°¡)
+		#0. Ptrë¥¼ ì‚¬ìš©í•˜ëŠ” ì‚­ì œ í•¨ìˆ˜ (Delete) ë³´ë‹¤ ë‹¹ì—°ížˆ ë¬´ê²ìŠµë‹ˆë‹¤. (Search ì¶”ê°€)
 
-		!0. ³»ºÎ¿¡¼­ Ã£Àº Node¿¡ ´ëÇÑ ¸Þ¸ð¸® È¸¼ö(delete) °¡ ÀÏ¾î³³´Ï´Ù.
+		!0. ë‚´ë¶€ì—ì„œ ì°¾ì€ Nodeì— ëŒ€í•œ ë©”ëª¨ë¦¬ íšŒìˆ˜(delete) ê°€ ì¼ì–´ë‚©ë‹ˆë‹¤.
 
-		!1. µû¶ó¼­, ¿ÜºÎ¿¡¼­ ÇØ´ç ³ëµå¿¡ Æ÷ÀÎÅÍ¸¦ ÅëÇÑ ÂüÁ¶°¡ ÀÖÀ» °æ¿ì, Dangling Pointer °ü·Ã ¿¡·¯°¡ ³¯ °¡´É¼ºÀÌ Å®´Ï´Ù.
+		!1. ë”°ë¼ì„œ, ì™¸ë¶€ì—ì„œ í•´ë‹¹ ë…¸ë“œì— í¬ì¸í„°ë¥¼ í†µí•œ ì°¸ì¡°ê°€ ìžˆì„ ê²½ìš°, Dangling Pointer ê´€ë ¨ ì—ëŸ¬ê°€ ë‚  ê°€ëŠ¥ì„±ì´ í½ë‹ˆë‹¤.
 	*/
 	template <typename DATA, typename KEY_TYPE>
 	bool rbTree<DATA, KEY_TYPE>::DeleteWithSearch(const KEY_TYPE& InKey)
@@ -763,14 +768,66 @@ namespace CUSTOM_SET_REDBLACKTREE
 		}
 	}
 
+	
+	/*
+		Clear();
+			- pNullNodeë¥¼ ì œì™¸í•˜ê³ , íŠ¸ë¦¬ì— í• ë‹¹ëœ ëª¨ë“  ë…¸ë“œë“¤ì„ ë°˜ë‚©í•©ë‹ˆë‹¤.
+
+			ì¸ìž : void
+			ì¶œë ¥ : void
+	*/
+	template <typename DATA, typename KEY_TYPE>
+	void rbTree<DATA, KEY_TYPE>::Clear() 
+	{
+		_Node* pTraversalNode = pRoot;
+		_Node* pDeletedNode = pRoot;
+		
+		while (7)
+		{
+			if (pTraversalNode->left != pNullNode)
+			{
+				pTraversalNode = pTraversalNode->left;
+				continue;
+			}
+
+			if (pTraversalNode->right != pNullNode)
+			{
+				pTraversalNode = pTraversalNode->right;
+				continue;
+			}
+
+			pDeletedNode = pTraversalNode;
+			
+			if (pTraversalNode->up != pNullNode)
+			{
+				if (pTraversalNode->up->left == pTraversalNode)
+					pTraversalNode->up->left = pNullNode;
+				else /* if (pTraversalNode->up->right == pTraversalNode) */
+					pTraversalNode->up->right = pNullNode;
+
+				pTraversalNode = pTraversalNode->up;
+
+				delete pDeletedNode;
+			}
+			else
+			{
+				delete pDeletedNode;
+				break;
+			}
+		}
+
+		pRoot = pNullNode;
+	};
+
+	
 	// ================================== Rotate
 
 	/*
 		_LeftRotate(rbTreeNode<DATA, KEY_TYPE>* pRetNode)
-			- Æ®¸®±¸Á¶¿¡¼­ ¿ÞÂÊ È¸ÀüÀ» ½ÃµµÇÕ´Ï´Ù.
+			- íŠ¸ë¦¬êµ¬ì¡°ì—ì„œ ì™¼ìª½ íšŒì „ì„ ì‹œë„í•©ë‹ˆë‹¤.
 
-		ÀÎÀÚ : È¸ÀüÀÇ ±âÁØÀÌ µÇ´Â ³ëµåÀÇ Æ÷ÀÎÅÍ
-		Ãâ·Â : void
+		ì¸ìž : íšŒì „ì˜ ê¸°ì¤€ì´ ë˜ëŠ” ë…¸ë“œì˜ í¬ì¸í„°
+		ì¶œë ¥ : void
 		
 		#0. https://en.wikipedia.org/wiki/Tree_rotation
 	*/
@@ -780,45 +837,45 @@ namespace CUSTOM_SET_REDBLACKTREE
 		_Node* pParentNode = pRetNode->up;
 		_Node* pRightChildNode = pRetNode->right;
 
-		// RetNode°¡ ÇöÀç Æ®¸®ÀÇ pRootNodeÀÏ ¶§ ( ¿À¸¥ÂÊ ÀÚ½ÄÀÌ ·çÆ®°¡ µÊ (LeftRotate) )
+		// RetNodeê°€ í˜„ìž¬ íŠ¸ë¦¬ì˜ pRootNodeì¼ ë•Œ ( ì˜¤ë¥¸ìª½ ìžì‹ì´ ë£¨íŠ¸ê°€ ë¨ (LeftRotate) )
 		if (pParentNode == pNullNode)
 			pRoot = pRightChildNode;
 		else
 		{
-			//ÇöÀç ³ëµå°¡ ºÎ¸ð ³ëµåÀÇ ¿ÞÂÊ ÀÚ½Ä ³ëµåÀÏ¶§,
+			//í˜„ìž¬ ë…¸ë“œê°€ ë¶€ëª¨ ë…¸ë“œì˜ ì™¼ìª½ ìžì‹ ë…¸ë“œì¼ë•Œ,
 			if (pRetNode == pParentNode->left)
 				pParentNode->left = pRightChildNode;
 
-			//ÇöÀç ³ëµå°¡ ºÎ¸ð ³ëµåÀÇ ¿À¸¥ÂÊ ÀÚ½Ä ³ëµåÀÏ¶§,
+			//í˜„ìž¬ ë…¸ë“œê°€ ë¶€ëª¨ ë…¸ë“œì˜ ì˜¤ë¥¸ìª½ ìžì‹ ë…¸ë“œì¼ë•Œ,
 			else
 				pParentNode->right = pRightChildNode;
 		}
 
-		//ÇöÀç RetÀÇ ºÎ¸ð³ëµå¿Í, RetÀÇ ¿À¸¥ÂÊ ÀÚ½Ä ³ëµå¸¦ ºÎ¸ð°ü°è·Î ¹Ù²ãÁÖ°í, Ret³ëµå´Â ÀÚ½Ä³ëµåÀÇ ÀÚ½ÄÀ¸·Î º¯°æÇÕ´Ï´Ù.
+		//í˜„ìž¬ Retì˜ ë¶€ëª¨ë…¸ë“œì™€, Retì˜ ì˜¤ë¥¸ìª½ ìžì‹ ë…¸ë“œë¥¼ ë¶€ëª¨ê´€ê³„ë¡œ ë°”ê¿”ì£¼ê³ , Retë…¸ë“œëŠ” ìžì‹ë…¸ë“œì˜ ìžì‹ìœ¼ë¡œ ë³€ê²½í•©ë‹ˆë‹¤.
 
-		// ³» ºÎ¸ð´ÔÀº »ç½Ç, ³» ÀÚ½ÄÀÇ ºÎ¸ð´ÔÀÌ´Ù.
+		// ë‚´ ë¶€ëª¨ë‹˜ì€ ì‚¬ì‹¤, ë‚´ ìžì‹ì˜ ë¶€ëª¨ë‹˜ì´ë‹¤.
 		pRightChildNode->up = pRetNode->up;
 
-		// ³» ÀÚ½ÄÀº »ç½Ç, ³» ÀÚ½ÄÀÇ ÀÚ½Ä - ¼ÕÀÚ´Ù.
+		// ë‚´ ìžì‹ì€ ì‚¬ì‹¤, ë‚´ ìžì‹ì˜ ìžì‹ - ì†ìžë‹¤.
 		pRetNode->right = pRightChildNode->left;
 
-		// µû¶ó¼­ ³» ÀÚ½Ä - ¼ÕÀÚÀÇ ºÎ¸ð´Â ³ª´Ù.
+		// ë”°ë¼ì„œ ë‚´ ìžì‹ - ì†ìžì˜ ë¶€ëª¨ëŠ” ë‚˜ë‹¤.
 		pRightChildNode->left->up = pRetNode;
 
-		// ...³ª´Â ³» ¿¹Àü ÀÚ½ÄÀÇ ÀÚ½ÄÀÌ´Ù.
+		// ...ë‚˜ëŠ” ë‚´ ì˜ˆì „ ìžì‹ì˜ ìžì‹ì´ë‹¤.
 		pRightChildNode->left = pRetNode;
 
-		// °á±¹ ³» ºÎ¸ð´ÔÀº ³» ¿¾ ÀÚ½ÄÀÌ´Ù.
+		// ê²°êµ­ ë‚´ ë¶€ëª¨ë‹˜ì€ ë‚´ ì˜› ìžì‹ì´ë‹¤.
 		pRetNode->up = pRightChildNode;
 	};
 
 
 	/*
 		_RightRotate(rbTreeNode<DATA, KEY_TYPE>* pRetNode)
-			- Æ®¸®±¸Á¶¿¡¼­ ¿À¸¥ÂÊ È¸ÀüÀ» ½ÃµµÇÕ´Ï´Ù.
+			- íŠ¸ë¦¬êµ¬ì¡°ì—ì„œ ì˜¤ë¥¸ìª½ íšŒì „ì„ ì‹œë„í•©ë‹ˆë‹¤.
 
-		ÀÎÀÚ : È¸ÀüÀÇ ±âÁØÀÌ µÇ´Â ³ëµåÀÇ Æ÷ÀÎÅÍ
-		Ãâ·Â : void
+		ì¸ìž : íšŒì „ì˜ ê¸°ì¤€ì´ ë˜ëŠ” ë…¸ë“œì˜ í¬ì¸í„°
+		ì¶œë ¥ : void
 		
 		#0. https://en.wikipedia.org/wiki/Tree_rotation
 	*/
@@ -828,7 +885,7 @@ namespace CUSTOM_SET_REDBLACKTREE
 		_Node* pParentNode = pRetNode->up;
 		_Node* pLeftChildNode = pRetNode->left;
 
-		// ÁÖ¼® _LeftRotate ÇÏ°í µ¿ÀÏÇÕ´Ï´Ù..¶Ç ¾²±â ³Ê¹« ±ÍÂú¾î¿ä...
+		// ì£¼ì„ _LeftRotate í•˜ê³  ë™ì¼í•©ë‹ˆë‹¤..ë˜ ì“°ê¸° ë„ˆë¬´ ê·€ì°®ì–´ìš”...
 
 		if (pParentNode == pNullNode)
 			pRoot = pLeftChildNode;
@@ -854,10 +911,10 @@ namespace CUSTOM_SET_REDBLACKTREE
 
 	/*
 		_GetPrevNode(rbTreeNode<DATA, KEY_TYPE>* InNode);
-			- Predecessor¸¦ ±¸ÇÏ´Â ÇÔ¼ö, »ç¿ëµÇÁö ¾Ê½À´Ï´Ù. _GetNextNode¸¸ »ç¿ëµË´Ï´Ù. ÇØ´ç ÇÔ¼ö ¼³¸íÀ» È®ÀÎÇØÁÖ¼¼¿ä.
+			- Predecessorë¥¼ êµ¬í•˜ëŠ” í•¨ìˆ˜, ì‚¬ìš©ë˜ì§€ ì•ŠìŠµë‹ˆë‹¤. _GetNextNodeë§Œ ì‚¬ìš©ë©ë‹ˆë‹¤. í•´ë‹¹ í•¨ìˆ˜ ì„¤ëª…ì„ í™•ì¸í•´ì£¼ì„¸ìš”.
 
-		ÀÎÀÚ : DeleteµÇ¾î, PrevNode¸¦ ±¸ÇØ¾ßÇÏ´Â ³ëµåÀÇ Æ÷ÀÎÅÍ
-		Ãâ·Â : Predecessor Node's Pointer
+		ì¸ìž : Deleteë˜ì–´, PrevNodeë¥¼ êµ¬í•´ì•¼í•˜ëŠ” ë…¸ë“œì˜ í¬ì¸í„°
+		ì¶œë ¥ : Predecessor Node's Pointer
 	*/
 
 	template <typename DATA, typename KEY_TYPE>
@@ -865,55 +922,55 @@ namespace CUSTOM_SET_REDBLACKTREE
 	{
 		_Node* pRetNode = pInNode;
 
-		// ÁÂÃøÀÌ NullNode°¡ ¾Æ´Ò °æ¿ì, 
+		// ì¢Œì¸¡ì´ NullNodeê°€ ì•„ë‹ ê²½ìš°, 
 		if (pRetNode->left != pNullNode) {
 
-			// ÁÂÃøÀ¸·Î Æ÷ÀÎÅÍ¸¦ ÇÑ ¹ø ÀÌµ¿ÇÏ°í (ÁÂÃø ¼­ºêÆ®¸®¿¡ ÁøÀÔÇÏ°í)
+			// ì¢Œì¸¡ìœ¼ë¡œ í¬ì¸í„°ë¥¼ í•œ ë²ˆ ì´ë™í•˜ê³  (ì¢Œì¸¡ ì„œë¸ŒíŠ¸ë¦¬ì— ì§„ìž…í•˜ê³ )
 			pRetNode = pRetNode->left;
 
-			// ÇØ´ç ¼­ºêÆ®¸®¿¡¼­ °¡Àå Å« °ª (°¡Àå Right¿¡ ÀÖ´Â ³ëµå)¸¦ Ã£°í,
+			// í•´ë‹¹ ì„œë¸ŒíŠ¸ë¦¬ì—ì„œ ê°€ìž¥ í° ê°’ (ê°€ìž¥ Rightì— ìžˆëŠ” ë…¸ë“œ)ë¥¼ ì°¾ê³ ,
 			while (pRetNode->right != pNullNode)
 			{
 				pRetNode = pRetNode->right;
 			}
 
-			// ÇØ´ç ³ëµå¸¦ ¸®ÅÏÇÕ´Ï´Ù.
+			// í•´ë‹¹ ë…¸ë“œë¥¼ ë¦¬í„´í•©ë‹ˆë‹¤.
 			return pRetNode;
 		}
 	};
 
 	/*
 		_GetNextNode(rbTreeNode<DATA, KEY_TYPE>* InNode);
-			- Âü°í( À¸¾Ç ¿µ¾îÀÔ´Ï´Ù.) : https://www.geeksforgeeks.org/inorder-successor-in-binary-search-tree/
+			- ì°¸ê³ ( ìœ¼ì•… ì˜ì–´ìž…ë‹ˆë‹¤.) : https://www.geeksforgeeks.org/inorder-successor-in-binary-search-tree/
 
-		Á¶±Ý ¸»¾¸µå¸®¸é, Á¦°¡ ¿µ¾î°¡ ºÎÁ·ÇØ GetNextNode¶ó´Â ÇÔ¼ö¸íÀ» ›§À¸³ª
-		°ü·ÃµÇ¾î º¸Åë »ç¿ëµÇ´Â ¸íÄªÀº Predecessor, SuccessorÀÌ¸ç °¢°¢, ÇØ´ç ³ëµåÀÇ ÁÂÃø ¼­ºêÆ®¸®ÀÇ ÃÖ´ë°ª (Predecessor), ÇØ´ç ³ëµåÀÇ ¿ìÃø ¼­ºêÆ®¸®ÀÇ ÃÖ¼Ò°ª (Successor) È¤Àº ³ëµå¸¦ ¶æÇÏ´Â ´Ü¾îÀÔ´Ï´Ù.
+		ì¡°ê¸ˆ ë§ì”€ë“œë¦¬ë©´, ì œê°€ ì˜ì–´ê°€ ë¶€ì¡±í•´ GetNextNodeë¼ëŠ” í•¨ìˆ˜ëª…ì„ Â›ãŽ±ë¦½
+		ê´€ë ¨ë˜ì–´ ë³´í†µ ì‚¬ìš©ë˜ëŠ” ëª…ì¹­ì€ Predecessor, Successorì´ë©° ê°ê°, í•´ë‹¹ ë…¸ë“œì˜ ì¢Œì¸¡ ì„œë¸ŒíŠ¸ë¦¬ì˜ ìµœëŒ€ê°’ (Predecessor), í•´ë‹¹ ë…¸ë“œì˜ ìš°ì¸¡ ì„œë¸ŒíŠ¸ë¦¬ì˜ ìµœì†Œê°’ (Successor) í˜¹ì€ ë…¸ë“œë¥¼ ëœ»í•˜ëŠ” ë‹¨ì–´ìž…ë‹ˆë‹¤.
 
-		ÀÌ´Â ÀÌÁøÆ®¸®¶ó´Â ÀÚ·á±¸Á¶ Æ¯¼º»ó ´ÙÀ½°ú °°Àº ÀÇ¹Ì¸¦ Áö´Õ´Ï´Ù.
-		»èÁ¦µÇ´Â ³ëµå°¡ µÎ °³ÀÇ pNullNode°¡ ¾Æ´Ñ ÀÚ½ÄÀ» °¡Áú °æ¿ì, ÇØ´ç ³ëµåÀÇ ÀÚ¸®¿¡ ¾î¶² ³ëµå°¡ ¿Í¾ßÇÏ´Â Áö¸¦ ±¸ÇÏ´Â °ÍÀÌ¸ç,
-		±× ÀÚ¸®¿¡ ¿Ã ¼ö ÀÖ´Â ³ëµå´Â Predecessor ¶Ç´Â Successor°¡ ÀÖ½À´Ï´Ù.
+		ì´ëŠ” ì´ì§„íŠ¸ë¦¬ë¼ëŠ” ìžë£Œêµ¬ì¡° íŠ¹ì„±ìƒ ë‹¤ìŒê³¼ ê°™ì€ ì˜ë¯¸ë¥¼ ì§€ë‹™ë‹ˆë‹¤.
+		ì‚­ì œë˜ëŠ” ë…¸ë“œê°€ ë‘ ê°œì˜ pNullNodeê°€ ì•„ë‹Œ ìžì‹ì„ ê°€ì§ˆ ê²½ìš°, í•´ë‹¹ ë…¸ë“œì˜ ìžë¦¬ì— ì–´ë–¤ ë…¸ë“œê°€ ì™€ì•¼í•˜ëŠ” ì§€ë¥¼ êµ¬í•˜ëŠ” ê²ƒì´ë©°,
+		ê·¸ ìžë¦¬ì— ì˜¬ ìˆ˜ ìžˆëŠ” ë…¸ë“œëŠ” Predecessor ë˜ëŠ” Successorê°€ ìžˆìŠµë‹ˆë‹¤.
 
-		Âü°í·Î ÀÏ¹ÝÀûÀÎ ÀÌÁøÆ®¸®¿¡¼­ »èÁ¦ÇÏ´Â ³ëµå°¡ ÀÚ½ÄÀÌ ¾øÀ» °æ¿ì, °í³É »èÁ¦ÇÏ¸é µÇ°í,
-		»èÁ¦ÇÏ´Â ³ëµå°¡ 1°³ÀÇ ÀÚ½ÄÀ» °®°í ÀÖÀ» °æ¿ì, ÇØ´ç ÀÚ½ÄÀ» ±× ÀÚ¸®¿¡ À§Ä¡½ÃÅ°¸é µË´Ï´Ù.
+		ì°¸ê³ ë¡œ ì¼ë°˜ì ì¸ ì´ì§„íŠ¸ë¦¬ì—ì„œ ì‚­ì œí•˜ëŠ” ë…¸ë“œê°€ ìžì‹ì´ ì—†ì„ ê²½ìš°, ê³ ëƒ¥ ì‚­ì œí•˜ë©´ ë˜ê³ ,
+		ì‚­ì œí•˜ëŠ” ë…¸ë“œê°€ 1ê°œì˜ ìžì‹ì„ ê°–ê³  ìžˆì„ ê²½ìš°, í•´ë‹¹ ìžì‹ì„ ê·¸ ìžë¦¬ì— ìœ„ì¹˜ì‹œí‚¤ë©´ ë©ë‹ˆë‹¤.
 	*/
 	template <typename DATA, typename KEY_TYPE>
 	rbTreeNode<DATA, KEY_TYPE>*	rbTree<DATA, KEY_TYPE>::_GetNextNode(_Node* const InNode)
 	{
 		_Node* RetNode = InNode;
 
-		// ¿ìÃøÀÌ NullNode°¡ ¾Æ´Ò °æ¿ì, 
+		// ìš°ì¸¡ì´ NullNodeê°€ ì•„ë‹ ê²½ìš°, 
 		if (RetNode->right != pNullNode) {
 
-			// ¿ìÃøÀ¸·Î Æ÷ÀÎÅÍ¸¦ ÇÑ ¹ø ÀÌµ¿ÇÏ°í (¿ìÃø ¼­ºêÆ®¸®¿¡ ÁøÀÔÇÏ°í)
+			// ìš°ì¸¡ìœ¼ë¡œ í¬ì¸í„°ë¥¼ í•œ ë²ˆ ì´ë™í•˜ê³  (ìš°ì¸¡ ì„œë¸ŒíŠ¸ë¦¬ì— ì§„ìž…í•˜ê³ )
 			RetNode = RetNode->right;
 
-			// ÇØ´ç ¼­ºêÆ®¸®¿¡¼­ °¡Àå ÀÛÀº °ª (°¡Àå Left¿¡ ÀÖ´Â ³ëµå)¸¦ Ã£°í,
+			// í•´ë‹¹ ì„œë¸ŒíŠ¸ë¦¬ì—ì„œ ê°€ìž¥ ìž‘ì€ ê°’ (ê°€ìž¥ Leftì— ìžˆëŠ” ë…¸ë“œ)ë¥¼ ì°¾ê³ ,
 			while (RetNode->left != pNullNode)
 			{
 				RetNode = RetNode->left;
 			}
 
-			// ÇØ´ç ³ëµå¸¦ ¸®ÅÏÇÕ´Ï´Ù.
+			// í•´ë‹¹ ë…¸ë“œë¥¼ ë¦¬í„´í•©ë‹ˆë‹¤.
 			return RetNode;
 		}
 	};
@@ -921,10 +978,10 @@ namespace CUSTOM_SET_REDBLACKTREE
 
 	/*
 		_GetSiblingNode(rbTreeNode<DATA, KEY_TYPE>* pInNode);
-			- pInNodeÀÇ ÇüÁ¦ ³ëµåÀÇ Æ÷ÀÎÅÍ¸¦ ±¸ÇÏ´Â ÇÔ¼öÀÔ´Ï´Ù.
+			- pInNodeì˜ í˜•ì œ ë…¸ë“œì˜ í¬ì¸í„°ë¥¼ êµ¬í•˜ëŠ” í•¨ìˆ˜ìž…ë‹ˆë‹¤.
 
-		ÀÎÀÚ : ³ëµåÀÇ Æ÷ÀÎÅÍ
-		Ãâ·Â : ÇüÁ¦ ³ëµåÀÇ Æ÷ÀÎÅÍ
+		ì¸ìž : ë…¸ë“œì˜ í¬ì¸í„°
+		ì¶œë ¥ : í˜•ì œ ë…¸ë“œì˜ í¬ì¸í„°
 	*/
 	template <typename DATA, typename KEY_TYPE>
 	rbTreeNode<DATA, KEY_TYPE>*	rbTree<DATA, KEY_TYPE>::_GetSiblingNode(_Node* const pInNode)
@@ -941,17 +998,17 @@ namespace CUSTOM_SET_REDBLACKTREE
 		}
 		//else
 		//{
-		//	std::cout << "Error - ÇüÁ¦ ³ëµå¸¦ ¹ÝÈ¯ÇÏ´Â ÇÔ¼ö¿¡¼­ ¿¹¿Ü°¡ ¹ß»ýÇß½À´Ï´Ù. \n";
+		//	std::cout << "Error - í˜•ì œ ë…¸ë“œë¥¼ ë°˜í™˜í•˜ëŠ” í•¨ìˆ˜ì—ì„œ ì˜ˆì™¸ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤. \n";
 		//}
 	}
 
 
 	/*
 		_GetUncleNode(rbTreeNode<DATA, KEY_TYPE>* pInNode);
-			- pInNodeÀÇ Uncle ³ëµåÀÇ Æ÷ÀÎÅÍ¸¦ ±¸ÇÏ´Â ÇÔ¼öÀÔ´Ï´Ù.
+			- pInNodeì˜ Uncle ë…¸ë“œì˜ í¬ì¸í„°ë¥¼ êµ¬í•˜ëŠ” í•¨ìˆ˜ìž…ë‹ˆë‹¤.
 
-		ÀÎÀÚ : ³ëµåÀÇ Æ÷ÀÎÅÍ
-		Ãâ·Â : »ïÃÌ ³ëµåÀÇ Æ÷ÀÎÅÍ
+		ì¸ìž : ë…¸ë“œì˜ í¬ì¸í„°
+		ì¶œë ¥ : ì‚¼ì´Œ ë…¸ë“œì˜ í¬ì¸í„°
 	*/
 	template <typename DATA, typename KEY_TYPE>
 	rbTreeNode<DATA, KEY_TYPE>*	rbTree<DATA, KEY_TYPE>::_GetUncleNode(_Node* const pInNode)
@@ -964,7 +1021,7 @@ namespace CUSTOM_SET_REDBLACKTREE
 			return pGrandParentNode->left;
 		//else
 		//{
-		//		std::cout << "Error - Uncle ³ëµå¸¦ ¹ÝÈ¯ÇÏ´Â ÇÔ¼ö¿¡¼­ ¿¹¿Ü°¡ ¹ß»ýÇß½À´Ï´Ù. \n";
+		//		std::cout << "Error - Uncle ë…¸ë“œë¥¼ ë°˜í™˜í•˜ëŠ” í•¨ìˆ˜ì—ì„œ ì˜ˆì™¸ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤. \n";
 		//}
 	}
 
@@ -974,8 +1031,8 @@ namespace CUSTOM_SET_REDBLACKTREE
 	//Debug Function
 
 	/*
-		!0. Àç±ÍÇÔ¼ö¸¦ È°¿ëÇÏ°í ÀÖ½À´Ï´Ù. Æ®¸® ³ôÀÌ°¡ ³ôÀ» °æ¿ì, ½ºÅÃ ¿À¹öÇÃ·Î¿ì°¡ ¹ß»ýÇÒ ¼ö ÀÖ½À´Ï´Ù.
-		(µð¹ö±× ¿ëµµ·Î¸¸ »ç¿ëÇÏ´Â °ÍÀ» ÃßÃµµå¸³´Ï´Ù.)
+		!0. ìž¬ê·€í•¨ìˆ˜ë¥¼ í™œìš©í•˜ê³  ìžˆìŠµë‹ˆë‹¤. íŠ¸ë¦¬ ë†’ì´ê°€ ë†’ì„ ê²½ìš°, ìŠ¤íƒ ì˜¤ë²„í”Œë¡œìš°ê°€ ë°œìƒí•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+		(ë””ë²„ê·¸ ìš©ë„ë¡œë§Œ ì‚¬ìš©í•˜ëŠ” ê²ƒì„ ì¶”ì²œë“œë¦½ë‹ˆë‹¤.)
 	*/
 
 	template <typename DATA, typename KEY_TYPE>
